@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Вероника Сухорукова](https://up.htmlacademy.ru/htmlcss/23/user/860869).
-* Наставник: `Янн Север`(https://htmlacademy.ru/profile/10ktroubles).
+* Наставник: [Янн Север](https://htmlacademy.ru/profile/10ktroubles).
 
 ---
 
