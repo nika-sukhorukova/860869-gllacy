@@ -13,15 +13,42 @@
         <img src="img/index-logo.svg" width="154" height="64" alt="Логотип Gllaсy Shop">
       </a>
       <ul class="site-navigation">
-        <li><a href="catalog.html">Каталог</a></li>
+        <li>
+          <button class="catalog-button">Каталог</button>
+          <ul class="catalog-menu">
+            <li><a href="#">Новинки</a></li>
+            <li><a href="#">Сливочное</a></li>
+            <li><a href="#">Щербеты</a></li>
+            <li><a href="#">Фруктовый лед</a></li>
+            <li><a href="#">Мелорин</a></li>
+          </ul>
+        </li>
         <li><a href="delivery.html">Доставка и оплата</a></li>
         <li><a href="about.html">О Компании</a></li>
       </ul>
-      <div class="search">Поиск</div>
-      <ul class="user-navigation">
-        <li class="login-link">Вход</li>
-      </ul>
-      <span class="basket">Пусто</span>
+      <section>
+        <button type="button" aria-label="Кнопка Поиск">Поиск</button>
+        <form class="navigator-search" action="#" method="POST">
+          <p>
+            <input type="text" id="search" name="search" placeholder="Что ищем?">
+          </p>
+        <button type="button">Вход</button>
+        <h3 class="visually-hidden">Форма входа</h3>
+        <form class="navigator-entrance" action="#" method="POST">
+          <p><label for="email-entrance">Ваш e-mail</label>
+            <input type="text" id="email-entrance" name="name" placeholder="e-mail"></p>
+          <p><label for="navigator-password">Пароль</label>
+            <input type="text" id="navigator-password" name="password" placeholder="Пароль"></p>
+          <p>
+            <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
+          </p>
+          <p>
+            <a class="navigator-registration" href="#">Новая регистрация</a>
+          </p>
+          <button type="submit">Войти</button>
+        </form>
+        <button type="button">Пусто</button>
+      </section>
     </nav>
     <div class="header-contacts">
       <p>С 10 до 20, ежедневно<br>
@@ -173,8 +200,25 @@
         <p class="contacts">Для заказов по телефону<br>
           <a class="tel" href="tel:+78126668266">+7(812) 666-82-66</a><br>
           (с 10 до 20 ежедневно)</p>
-        <!--Здесь будет форма обратной связи-->
       </div>
+    </section>
+    <section class="Feedback-form">
+      <button>Форма обратной связи</button>
+      <h2>Мы обязательно вам ответим!</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
+      <form class="Feedback-form" action="#" method="POST">
+        <p class="Feedback-form-name">
+          <label for="name">Ваше имя</label>
+          <input type="text" name="name" id="name" placeholder="Как вас зовут?"></p>
+        <p class="Feedback-form-email">
+          <label for="email">Ваш e-mail</label>
+          <input type="email" name="email" id="email" placeholder="Ваша почта для ответа?"></p>
+        <p class="Feedback-form-textarea">
+          <label for="note">Форма заметки</label>
+          <textarea class="Feedback-form-textarea" id="note" name="note" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+        </p>
+        <button type="submit">Отправить</button>
+      </form>
       <!--Карта-->
     </section>
   </main>
