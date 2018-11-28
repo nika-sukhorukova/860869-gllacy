@@ -6,12 +6,11 @@
    </head>
    <body>
       <header class="main-header">
-         <nav class="main-navigation">
             <a class="main-header-logo">
             <img src="img/index-logo.svg" width="154" height="64" alt="Логотип Gllaсy Shop">
             </a>
-            <ul class="site-navigation">
-               <li>
+            <nav class="site-navigation">
+               <ul><li>
                   <button class="catalog-button">Каталог</button>
                   <ul class="catalog-menu">
                      <li><a href="#">Новинки</a></li>
@@ -23,14 +22,14 @@
                </li>
                <li><a href="delivery.html">Доставка и оплата</a></li>
                <li><a href="about.html">О Компании</a></li>
-            </ul>
+            </ul></nav>
             <section>
                <button type="button" aria-label="Кнопка Поиск">Поиск</button>
                <form class="navigator-search" action="#" method="POST">
                   <p>
                      <input type="text" id="search" name="search" placeholder="Что ищем?">
                   </p>
-                  <button type="button">Вход</button>
+                  <button class="button-nav button-welcome" type="button">Вход</button>
                   <h3 class="visually-hidden">Форма входа</h3>
                <form class="navigator-entrance" action="#" method="POST">
                   <p><label for="email-entrance">Ваш e-mail</label>
@@ -49,14 +48,13 @@
                </form>
                <button type="button">Пусто</button>
             </section>
-         </nav>
-         <div class="header-contacts">
-            <p>С 10 до 20, ежедневно<br>
-               8 812 450-25-25
-            </p>
-         </div>
       </header>
       <main class="container">
+         <div class="header-contacts">
+            <p>С 10 до 20, ежедневно<br>
+                     8 812 450-25-25
+            </p>
+         </div>
          <h1 class="visually-hidden">Магазин мороженого "Gllacy Shop"</h1>
          <ul class="slide-menu">
             <li class="slide-1">
@@ -79,36 +77,33 @@
             </li>
          </ul>
          <!--Листалка-->
-         <button class="slide-menu-button">Давайте оба!</button>
+         <button class="button-orange slide-menu-button">Давайте оба!</button>
          <h2 class="special-offers">Специальные предложения</h2>
          <section class="left-banner">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
             </p>
-            <button class="button-special-offers">Хочу варенье!</button>
+            <button class="button-orange button-special-offers">Хочу варенье!</button>
          </section>
          <section class="right-banner">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
             </p>
-            <button class="button-special-offers">Хочу шоколадки!</button>
+            <button class="button-orange button-special-offers">Хочу шоколадки!</button>
          </section>
          <section class="catalog">
             <h2 class="visually-hidden">Каталог</h2>
             <ul class="catalog-list">
                <li class="catalog-item">
-                  <img src="img/hit.png" alt="ХИТ">
-                  <p class="catalog-item-image">
-                     <a href="catalog-item.html">
+                  <a class="catalog-item-image" href="catalog-item.html">
                      <img src="img/creamy-orange.png" alt="Product Picture">
-                     </a>
-                  </p>
-                  <b>310 ₽/кг</b>
-                  <h3>
+                  </a>
+                  <p class="catalog-price">310 ₽/кг</p>
+                  <h3 class="catalog-item-name">
                      <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
                   </h3>
                </li>
-               <li class="catalog-item">
+               <li class="catalog-item catalog-item-hit">
                   <img src="img/hit.png" alt="ХИТ">
                   <p class="catalog-item-image">
                      <a href="catalog-item.html">
@@ -151,7 +146,6 @@
             <ul class="features-list">
                <li class="feature-item">
                   <h3 class="visually-hidden">Производство</h3>
-                  <img src="img/ice-cream.png" alt="ice-cream">
                   <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования
                      и проверенных временем технологий.
                   </p>
@@ -193,11 +187,11 @@
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас
                происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
             </p>
-            <button class="mail-button">Отправить</button>
+            <button class="button-orange mail-button">Отправить</button>
          </section>
          <section class="map">
-            <h2>Адрес</h2>
             <div class="adress">
+               <h2>Адрес</h2>
                <p class="contacts">
                   Адрес главного офиса и офлайн-магазина:<br>
                   <b class="adress-phone">ул.Б.Конюшенная,19/8, Санкт-Петербург</b>
@@ -206,28 +200,28 @@
                   <a class="tel" href="tel:+78126668266">+7(812) 666-82-66</a><br>
                   (с 10 до 20 ежедневно)
                </p>
+               <button>Форма обратной связи</button>
             </div>
+            <!-- Тут будет код карты-->
          </section>
          <section class="Feedback-form">
-            <button>Форма обратной связи</button>
-            <h2>Мы обязательно вам ответим!</h2>
-            <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
-            <form class="Feedback-form" action="#" method="POST">
-               <p class="Feedback-form-name">
-                  <label for="name">Ваше имя</label>
-                  <input type="text" name="name" id="name" placeholder="Как вас зовут?">
-               </p>
-               <p class="Feedback-form-email">
-                  <label for="email">Ваш e-mail</label>
-                  <input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
-               </p>
-               <p class="Feedback-form-textarea">
-                  <label for="note">Форма заметки</label>
-                  <textarea class="Feedback-form-textarea" id="note" name="note" rows="5" placeholder="Напишите что-нибудь..."></textarea>
-               </p>
-               <button type="submit">Отправить</button>
-            </form>
-            <!--Карта-->
+               <h2>Мы обязательно вам ответим!</h2>
+               <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
+               <form class="Feedback-form" action="#" method="POST">
+                  <p class="Feedback-form-name">
+                     <label for="name">Ваше имя</label>
+                     <input type="text" name="name" id="name" placeholder="Как вас зовут?">
+                  </p>
+                  <p class="Feedback-form-email">
+                     <label for="email">Ваш e-mail</label>
+                     <input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
+                  </p>
+                  <p class="Feedback-form-textarea">
+                     <label for="note">Форма заметки</label>
+                     <textarea class="Feedback-form-textarea" id="note" name="note" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+                  </p>
+                  <button type="submit">Отправить</button>
+               </form>
          </section>
       </main>
       <footer class="main-footer">
