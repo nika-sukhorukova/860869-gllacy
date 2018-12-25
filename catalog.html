@@ -73,8 +73,8 @@
         <div class="main-button">
           <ul class="menu-selection">
             <li>
-              <label for="select">Сортировка:</label>
-              <select name="select">
+              <label for="select-button">Сортировка:</label>
+              <select name="select" id="select-button">
                 <option value="">по популярности</option>
               </select>
             </li>
@@ -82,20 +82,20 @@
               <label for="price">Цена: 100 руб.- 500 руб.</label>
               <input type="range" id="price" name="price" min="100" max="500" step="1" value="10">
             </li>
-            <li><label for="content">Жирность:</label>
-              <label>
-                <input type="radio" name="content" value="0%">0%
-              </label>
-              <label>
-                <input type="radio" name="content" value="до 10%" checked>до 10%
-              </label>
-              <label>
-                <input type="radio" name="content" value="до 30%">до 30%
-              </label>
-              <label>
-                <input type="radio" name="content" value="выше 30%">выше 30%
-              </label>
-            </li>
+            <li><label for="consistency">Жирность:</label>
+                <label>
+                  <input type="radio" name="consistency" value="0%">0%
+                </label>
+                <label>
+                  <input type="radio" name="consistency" value="до 10%" id="consistency" checked>до 10%
+                </label>
+                <label>
+                  <input type="radio" name="consistency" value="до 30%">до 30%
+                </label>
+                <label>
+                  <input type="radio" name="consistency" value="выше 30%">выше 30%
+                </label>
+              </li>
             <li>Наполнители:
               <input type="checkbox" name="шоколадные" id="choco" checked>
               <label for="choco">шоколадные</label>
