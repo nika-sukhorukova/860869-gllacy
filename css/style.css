@@ -698,6 +698,7 @@ img {
 
   font-size: 16px;
   font-weight: normal;
+  
 }
 .email-admit{
   display: inline-block;
@@ -774,6 +775,47 @@ img {
   cursor: pointer;
 
 }
+.modal-form {
+  position: absolute;
+  right: 450px;
+  top: 65px;
+
+  list-style: none;
+  background-color: #f7f6f3;
+  /* display: none; */
+  opacity: 0%;
+  min-width: 278px;
+  min-height: 213;
+  padding: 21px;
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  color: #848483;
+  font-size: 16px;
+  font-weight: normal;
+  
+}
+
+.login-input{
+    display: inline-block;
+    font-size: 16px;
+    width: 242px;
+    height: 43px;
+    margin-left: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+
+    padding: 0 15px;
+}
+
+.navigator-password-recovery,
+.navigator-registration{
+  display: inline-block;
+  font-size: 13px;
+  
+}
+
 
 .main-footer {
   display: flex;
