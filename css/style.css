@@ -223,7 +223,7 @@ img {
   position: absolute;
   top: 6px;
   left: 16px;
-  background-image: url('../img/login.png');
+  background-image: url("../img/login.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   width: 20px;
@@ -235,12 +235,30 @@ img {
   position: absolute;
   width: 32px;
   height: 32px;
-  background-image: url('../img/magnifier.png');
+  background-image: url("../img/magnifier.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   left: 0;
   top: 0;
 }
+.basket {
+  position: relative;
+  padding-left: 43px;
+  font-weight: 500;
+}
+
+.basket::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  background-image: url("../img/basket.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 21px;
+  height: 19px;
+}
+
 
 .navigator-number {
   color: #ffffff;
@@ -369,7 +387,7 @@ img {
 
 .slider-controls {
   position: absolute;
-  bottom: 63px;
+  bottom: 22px;
   left: 0;
   z-index: 20;
 
@@ -437,132 +455,151 @@ img {
 }
 
 .button-link {
-  display: ;
-  padding: 22px 12px;
-  margin-right: 22px;
+  display: block;
+  padding: 11px 22px;
+  margin-right: 22px; 
   min-width: 169px;
-
-  font-weight: 600;
+  font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: #ffffff;
-  vertical-align: top;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
   background: #f26843;
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 50px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
-
   cursor: pointer;
+  box-sizing: border-box
 }
 
 .sale-berries {
   background-image: url("../img/raspberries.jpg");
   background-repeat: no-repeat;
-
-  }
+}
 
 .discount {
   color: #ffffff;
   font-size: 35px;
-  text-align: 41px;
-
-  padding-left: 12px;
-  padding-top: 15px;
-
+  line-height: 41px;
+  padding-left: 20px;
 }
 
 .sale-berries,
 .sale-chocolate {
   width: 560px;
+  height: 229px;
   border-radius: 20px;
   margin: 0;
   padding: 0;
-
   outline: 1px solid red;
 }
 
 .sale-chocolate {
   background-image: url("../img/chocolate.jpg");
   background-repeat: no-repeat;
-
   outline: 1px solid red;
-
 }
 
 .berries-text {
   color: #ffffff;
   font-size: 18px;
-  text-align: 22px;
-
-  padding-top: 12px;
-  padding-left: 12px;
+  line-height: 22px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
 
 }
 
-.sale-berries a,
-.sale-chocolate a {
+.sale-berries .button-link,
+.sale-chocolate .button-link {
   display: inline-block;
-  position: relative;
-  bottom: 22px;
-  left: 373px;
-
+  float: right;
   color: #ffffff;
   text-decoration: none;
   list-style: none;
   text-align: center;
-
-  padding: 18px 10px;
-
-
+  white-space:nowrap;
+  min-width: 165px;
+  min-height: 46px;
+  box-sizing: border-box;
   border-color: #ee5e3e;
   background-color: #ee5e3e;
 }
 
-.sale-berries a:hover,
-.sale-chocolate a:hover,
-.sale-berries a:focus,
-.sale-chocolate a:focus {
+.button-link:hover,
+.button-link:focus {
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
   }
 
-.sale-berries a:active,
-.sale-chocolate a:active{
+.button-link:active{
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
-
 .catalog-list {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  margin: 0 auto;
   padding: 0;
-  margin-bottom: 34px;
-
+  margin-bottom: 40px;
+  width: calc(100% + 26px);
   outline: 1px solid red;
-}
-
-.catalog-product,
-.catalog-product a{
-  color: #ffffff;
-  list-style: none;
-
+  margin-left: -13px;
+  position: relative;
+  min-height: 327px;
 }
 
 .catalog-product {
+  color: #ffffff;
+  list-style: none;
   margin: 0;
-  padding: 0;
-  width: 267px;
-
+  padding: 6px 13px 0;
+  width: 25%;
+  position: absolute;
   outline: 1px solid red;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  height: 327px;
+}
+
+.catalog-product:nth-child(2) {
+  left: 25%;
+}
+
+.catalog-product:nth-child(3) {
+  left: 50%;
+}
+
+.catalog-product:nth-child(4) {
+  left: 75%;
+}
+
+.catalog-product:hover {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  height: 412px;
+}
+
+.catalog-product .button-link {
+  width: 200px;
+  margin: 0 auto;
+  padding: 11px;
+}
+
+.button-link.hidden {
+  display: none;
+}
+
+.catalog-product:hover .button-link.hidden {
+  display: block;
+}
+
+.catalog-item-image {
+  margin: 0;
+  height: 267px;
 }
 
 .catalog-item-image::before {
@@ -578,16 +615,12 @@ img {
 
 }
 
-.catalog-product a {
+.catalog-product__link {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-
-}
-
-.catalog-product h3 {
-  order: 1;
-  text-align: center;
+  color: #ffffff;
+  list-style: none;
 }
 
 .catalog-category {
@@ -595,16 +628,18 @@ img {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+  order: 1;
+  margin: 13px 0;
 }
 
-.catalog-product b {
-  display: inline-block;
-  position: relative;
-  top: -182px;
 
+.catalog-item-price {
+  margin: 0;
+  position: absolute;
   color: #ffffff;
   font-size: 45px;
   line-height: 45px;
+  top: 215px;
 }
 
 .catalog-item-price span {
@@ -614,43 +649,32 @@ img {
 
 
 .main-info {
-  width: 1146px;
-
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
   background-color: #ede1c7;
   border-radius: 20px;
-
+  padding: 20px;
   margin: 0 auto;
   margin-bottom: 40px;
-
   color: #323232;
-
   outline: 1px solid red;
-}
-
-.main-info li {
-  margin: 0;
-  padding: 0;
-
-  outline: 1px solid red;
+  height: 306px;
 }
 
 .main-info-market {
   color: #575550;
   font-size: 24px;
   line-height: 30px;
-
-  padding-top: 23px;
-  padding-left: 15px;
-
   outline: 1px solid red;
+  margin: 3px 0 -10px 0;
 }
 
 .information {
-  display: ;
-  width: 560px;
-
+  display: flex;
+  padding: 0;
+  height: 218px;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .info-list {
@@ -658,28 +682,33 @@ img {
   font-size: 16px;
   line-height: 22px;
   list-style: none;
+  width: calc(50% - 60px);
+  padding-left: 60px;
+  font-weight: normal;
 }
 
+.info-list.ice-cream-icon {
+  background: url("../img/ice-cream.png") 0 0 no-repeat;
+}
 
+.info-list.leaf-icon {
+  background: url("../img/leaf.png") 0 0 no-repeat;
+}
 
+.info-list.cow-icon {
+  background: url("../img/cow.png") 0 0 no-repeat;
+}
 
-
-.manufacture::after {
-  content: "";
-
-  position: absolute;
-  background-image: url("../img/ice-cream.png");
-
+.info-list.thermometer-icon {
+  background: url("../img/thermometer.png") 0 0 no-repeat;
 }
 
 .blog-mailling {
   display: flex;
   justify-content: space-between;
-
   margin: 0 auto;
   padding: 0;
   margin-bottom: 37px;
-
   outline: 1px solid red;
 }
 
@@ -687,8 +716,7 @@ img {
   background-image: url("../img/barries.jpg");
   background-repeat: no-repeat;
   background-color: #ffffff;
-  border-radius: 20px;
-
+  border-radius: 15px;
   width: 560px;
   height: 220px;
 
@@ -699,106 +727,138 @@ img {
   color: #323232;
   font-size: 16px;
   line-height: 22px;
-  padding: 15px 0 0 24px;
+  padding: 22px 0 0 18px;
+  margin: 0;
 }
 
 .blog-category {
   color: #323232;
   font-size: 24px;
   line-height: 30px;
-  padding: 0 210px 0 24px;
+  padding: 4px 213px 0 18px;
+  margin: 0;
+  position: relative
 }
 
-.mailing {
-  background-image: url("../img/envelope2.png");
-  
-  border-radius: 20px;
+.blog-category__link{
+  color: #323232;
+  text-decoration-line:underline;
 
+}
+
+.mailing{
+  background: url("../img/envelope2.png") no-repeat;
+  border-radius: 15px;
   width: 560px;
-
   color: #848483;
-
-  padding: 20px 15px;
+  padding: 15px 27px 23px 27px;
   box-sizing: border-box;
-
   font-size: 16px;
   font-weight: normal;
+  position: relative;
   
 }
 .email-admit{
-  display: inline-block;
-  padding: 10px 25px;
+  padding: 0;
   margin-left: 10px;
-  
-  font-weight: 600;
+  font-weight: bold;
   font-size: 18px;
-  
   text-align: center;
   color: #ffffff;
   vertical-align: top;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
   background: #f26843;
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 50px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
-
   cursor: pointer;
+  width: 129px;
+  height: 44px;
+  position: absolute;
+  bottom: 40px;
 }
+
 .input-email{
     display: inline-block;
     font-size: 16px;
-    width: 335px;
-    height: 40px;
-    margin-left: 5px;
-    border: 1px solid grey;
+    width: 336px;
+    height: 42px;
+    border: 1px solid #d3d3d2;
     border-radius: 5px;
-
     padding: 0 15px;
+    margin-top: 18px;
+}
+
+.contact-map {
+  margin-left: -27px;
+  position: relative;
+}
+
+.contact-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 1px;
+  padding-right: 55px;
+}
+
+.adress-text{
+  margin: 0;
+  font-size: 18px;
+  padding-right: 55px;
+}
+
+.phone-contact{
+  margin-top: 18px;
+  margin-bottom: 3px;
+}
+
+.telephone {
+  text-decoration: none;
+  color: black;
+}
+
+.opening-hours {
+  margin-bottom: 24px;
+  margin-top: 4px;
 
 }
 
 .contact-info {
   border: 1px solid #ffffff;
   background-color: #ffffff;
-  
-  
-  padding: 10px;
-
+  padding:12px 26px;
   color: #323232;
   position: absolute;
-  left: 1200px;
-  top: 2220px;
+  right: 0;
+  top: 62px;
   border-radius: 20px;
-  width: 294px;
-  height: 320px;
-
+  width: 248px;
+  height: 278px;
 }
 
 .feedback {
   display: inline-block;
-  padding: 10px 25px;
-  margin-left: 30px;
-  
-  font-weight: 600;
+  padding: 0;
+  font-weight: bold;
   font-size: 18px;
-  
   text-align: center;
   color: #ffffff;
   vertical-align: top;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
   background: #f26843;
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 50px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
-
   cursor: pointer;
-
+  height: 45px;
+  width: 265px;
+  position: absolute;
+  right: 15px;
 }
 .modal-form {
   position: absolute;
@@ -813,9 +873,7 @@ img {
   min-height: 213;
   padding: 21px;
   box-sizing: border-box;
-
   border-radius: 5px;
-
   color: #848483;
   font-size: 16px;
   font-weight: normal;
@@ -862,4 +920,35 @@ img {
 .footer-copyright a {
   color: #ffffff;
 
+}
+
+.social-button{
+  text-decoration: none;
+  padding: 0; 
+}
+
+.social-button-list {
+  display: inline;
+  margin-right: 7px;
+}
+
+.social-button-list svg  {
+  border: rgba(218, 226, 222, 0.5) 2px solid;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.social-news {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 36px;
+}
+
+.social-button svg:hover {
+  opacity: 1;
+}
+
+.social-button svg:active {
+  border: rgba(218, 226, 222, 0.7) 2px solid;
+  border-radius: 50%;
+  opacity: 1;
 }
