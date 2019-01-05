@@ -1,13 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-
   font-family: "Roboto","Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
-
   background-color: #849d8f;
 }
 
@@ -31,9 +29,7 @@ input[type="radio"].visually-hidden {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -52,7 +48,6 @@ img {
   align-items: center;
   margin: 0 auto;
   padding-top: 10px;
-
   outline: 1px solid red;
 }
 
@@ -280,14 +275,12 @@ img {
   /* background-image: url("img/"); */
   background-repeat: no-repeat;
   background-position: top center;
-
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .site-wrapper::before,
 .site-wrapper::after {
   content: "";
-
   visibility: hidden;
 }
 
@@ -301,10 +294,8 @@ img {
 
 .slider {
   position: relative;
-
   padding-top: 280px;
   margin-bottom: 38px;
-
   text-align: center;
   color: #ffffff;
 }
@@ -312,7 +303,6 @@ img {
 .slider-list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
@@ -320,7 +310,6 @@ img {
   width: 700px;
   margin: 0 auto;
   margin-bottom: 39px;
-
   font-size: 60px;
   line-height: 60px;
   font-weight: 800;
@@ -356,7 +345,6 @@ img {
 .button {
   display: inline-block;
   padding: 12px 44px;
-
   font-weight: 600;
   font-size: 31px;
   line-height: 41px;
@@ -365,13 +353,11 @@ img {
   vertical-align: top;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
   background: #f26843;
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   border-radius: 50px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
-
   cursor: pointer;
 }
 
@@ -390,7 +376,6 @@ img {
   bottom: 22px;
   left: 0;
   z-index: 20;
-
   font-size: 0;
 }
 
@@ -399,9 +384,7 @@ img {
   width: 17px;
   height: 17px;
   margin-right: 8px;
-
   vertical-align: top;
-
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -425,7 +408,6 @@ img {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-
   margin: 0 auto;
   padding: 0px;
   outline: 1px solid red;
@@ -438,10 +420,8 @@ img {
 .sale-wrapper {
   display: flex;
   justify-content: space-between;
-
   margin-bottom: 40px;
   padding: 0;
-
   outline: 1px solid red;
 }
 
@@ -576,6 +556,44 @@ img {
   left: 75%;
 }
 
+.catalog-product:nth-child(5) {
+  top: 100%;
+}
+
+.catalog-product:nth-child(6) {
+  top: 100%;
+  left: 25%;
+}
+
+.catalog-product:nth-child(7) {
+  top: 100%;
+  left: 50%;
+}
+
+.catalog-product:nth-child(8) {
+  top: 100%;
+  left: 75%;
+}
+
+.catalog-product:nth-child(9) {
+  top: 200%;
+}
+
+.catalog-product:nth-child(10) {
+  top: 200%;
+  left: 25%;
+}
+
+.catalog-product:nth-child(11) {
+  top: 200%;
+  left: 50%;
+}
+
+.catalog-product:nth-child(12) {
+  top: 200%;
+  left: 75%;
+}
+
 .catalog-product:hover {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -604,12 +622,9 @@ img {
 
 .catalog-item-image::before {
   content: "";
-
   position: absolute;
-
   width: 62px;
   height: 62px;
-
   background-image:url("../img/hit.png");
   background-repeat: no-repeat;
 
@@ -903,10 +918,8 @@ img {
 .main-footer {
   display: flex;
   justify-content: space-between;
-
   margin: 0 auto;
   padding: 0;
-
   outline: 1px solid red;
 }
 
@@ -914,12 +927,56 @@ img {
 .footer-list {
   color: #ffffff;
   text-decoration: none;
+}
+
+.footer-list-info {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 50px;
+  font-size: 13px;
   list-style: none;
+  margin-top: 30px;
+  font-weight: normal;
+ 
+}
+.footer-list-info-item{
+  padding-right: 16px;
+}
+
+.footer-list-info-item a {
+  border-bottom: rgba(218, 226, 222, 0.4) 1px solid;
+}
+
+.footer-list-info li:first-child {
+  list-style-image: url("../img/heart.png");
+  font-weight: bold; 
+}
+.footer-copyright {
+  margin-top: 10px;
+  position: relative;
+  top: 28px;
 }
 
 .footer-copyright a {
   color: #ffffff;
+}
 
+.copyright {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.academy {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.copyright-image {
+  background: url("../img/logo-htmlacademy-small.png") no-repeat;
+  margin-top: 18px;
+  margin-bottom: 47px;
 }
 
 .social-button{
@@ -948,7 +1005,14 @@ img {
 }
 
 .social-button svg:active {
-  border: rgba(218, 226, 222, 0.7) 2px solid;
+  border: rgba(218, 226, 222, 0.9) 2px solid;
   border-radius: 50%;
   opacity: 1;
+}
+
+.breadcrumbs-container {
+  min-height: 1300px;
+}
+.catalog-footer {
+  border-top: rgba(169, 187, 177, 0.9) 1px solid;
 }
