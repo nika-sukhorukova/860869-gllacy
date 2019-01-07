@@ -15,7 +15,7 @@
                 <img src="img/index-logo.svg" width="154" height="64" alt="Логотип Глейси">
               </a>
               <ul class="main-menu-navigator">
-                <li class="dropdown"><a class="main-menu-link" href="catalog.html"><span class="main-menu-link__title">Каталог</span></a>
+                <li class="dropdown"><a class="main-menu-link main-menu-link-catalog" href="catalog.html"><span>Каталог</span></a>
                   <ul class="dropdown-child">
                     <li class="dropdown-child__item dropdown-child__item_bold">
                       <a href="#">Новинки</a>
@@ -55,55 +55,63 @@
     </header>
     <main class="breadcrumbs-container">
       <ul class="breadcrumbs">
-        <li><a href="index.html">Главная</a>
+        <li><a class="breadcrumbs-link" href="index.html">Главная</a>
         </li>
-        <li><a href="catalog.html">Каталог</a>
+        <li><a class="breadcrumbs-link" href="catalog.html">Каталог</a>
         </li>
-        <li><a href="#">Сливочное</a>
+        <li><a class="breadcrumbs-link-ending" href="#">Сливочное</a>
         </li>
       </ul>
-
       <section class="main-menu">
         <h1 class="page-title">Сливочное мороженое</h1>
         <div class="main-button">
           <ul class="menu-selection">
-            <li>
-              <label for="select-button">Сортировка:</label>
-              <select name="select" id="select-button">
-                <option value="">по популярности</option>
-              </select>
-            </li>
-            <li>
-              <label for="price">Цена: 100 руб.- 500 руб.</label>
-              <input type="range" id="price" name="price" min="100" max="500" step="1" value="10">
-            </li>
-            <li><label for="consistency">Жирность:</label>
-                <label>
-                  <input type="radio" name="consistency" value="0%">0%
-                </label>
-                <label>
-                  <input type="radio" name="consistency" value="до 10%" id="consistency" checked>до 10%
-                </label>
-                <label>
-                  <input type="radio" name="consistency" value="до 30%">до 30%
-                </label>
-                <label>
-                  <input type="radio" name="consistency" value="выше 30%">выше 30%
-                </label>
+            <li class="catalog-selection-list">
+              <label class="catalog-label" for="select-button">Сортировка:</label>
+                  <span class="menu-selection-list-sort">
+                    <select class="menu-catalog-select select" name="select" id="select-button">
+                    <option value="">по популярности</option>
+                    <option value="">сначала недорогие</option>
+                    <option value="">сначала дорогие</option>
+                    <option value="">по жирности</option>
+                  </select>
+                </span>  
               </li>
-            <li>Наполнители:
-              <input type="checkbox" name="шоколадные" id="choco" checked>
-              <label for="choco">шоколадные</label>
-              <input type="checkbox" name="сахарные присыпки" id="sugar" checked>
-              <label for="sugar">сахарные присыпки</label>
-              <input type="checkbox" name="фрукты" id="fruit">
-              <label for="fruit">фрукты</label>
-              <input type="checkbox" name="сиропы" id="syrup">
-              <label for="syrup">сиропы</label>
-              <input type="checkbox" name="джемы" id="jam">
-              <label for="jam">джемы</label>
+            <li class="catalog-selection-list">
+              <label class="catalog-label" for="price">Цена: <span class="js-low-price">100</span> руб.- <span class="js-high-price">500</span> руб.</label>
+              <span class="menu-selection-list">
+                <input  multiple type="range" id="price" name="price" min="0" max="700" value="100,500">
+              </span>   
             </li>
-            <li><button>Применить</button></li>
+            <li class="catalog-selection-list">
+              <label class="catalog-label" for="consistency">Жирность:</label>
+              <span class="menu-selection-list menu-selection-list-consistency">
+                <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="0%" id="zero">
+                  <label class="label-radio" for="zero">0%</label>
+                <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="до 10%" id="ten" checked>
+                  <label class="label-radio" for="ten">до 10%</label>
+                <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="до 30%" id="thirty">
+                  <label class="label-radio" for="thirty">до 30%</label>
+                <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="выше 30%" id="up-thirty">
+                <label class="label-radio" for="up-thirty">выше 30%</label>
+              </span>
+              </li>
+            <li class="catalog-selection-list">
+              <label class="catalog-label"> Наполнители:</label>
+              <span class="menu-selection-list">
+                <input class="checkbox visually-hidden" type="checkbox" name="шоколадные" id="choco" checked>
+                <label for="choco">шоколадные</label>
+                <input class="checkbox visually-hidden" type="checkbox" name="сахарные присыпки" id="sugar" checked>
+                <label for="sugar">сахарные присыпки</label>
+                <input class="checkbox visually-hidden" type="checkbox" name="фрукты" id="fruit">
+                <label for="fruit">фрукты</label>
+                <input class="checkbox visually-hidden" type="checkbox" name="сиропы" id="syrup">
+                <label for="syrup">сиропы</label>
+                <input class="checkbox visually-hidden" type="checkbox" name="джемы" id="jam">
+                <label for="jam">джемы</label>
+              </span>  
+            </li>
+            <li class="catalog-selection-list"><button class="menu-selection-button">Применить</button></li>
           </ul>
         </div>
       </section>
@@ -114,10 +122,10 @@
             <a class="catalog-product__link" href="catalog-item.html">
               <h3 class="catalog-category">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
                 <img src="img/creamy-orange.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p class="catalog-item-price">
-              <b>310 ₽/<span class="rub">кг</span></b>
-            </p>
-            <a class="button-link hidden" href="#">Быстрый просмотр</a>
+              <p class="catalog-item-price">
+                <b>310 ₽/<span class="rub">кг</span></b>
+              </p>
+              <a class="button-link hidden" href="#">Быстрый просмотр</a>
             </a>
           </li>
           <li class="catalog-product">
@@ -329,6 +337,99 @@
         </div>
       </footer>
   </div>
+  <script>
+  (function() {
+      "use strict";
+      
+      var supportsMultiple = self.HTMLInputElement && "valueLow" in HTMLInputElement.prototype;
+      
+      var descriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
+      
+      self.multirange = function(input) {
+        if (supportsMultiple || input.classList.contains("multirange")) {
+          return;
+        }
+      
+        var value = input.getAttribute("value");
+        var values = value === null ? [] : value.split(",");
+        var min = +(input.min || 0);
+        var max = +(input.max || 100);
+        var ghost = input.cloneNode();
+        var lowPrice = document.querySelector('.js-low-price');
+        var highPrice = document.querySelector('.js-high-price');
+      
+        input.classList.add("multirange", "original");
+        ghost.classList.add("multirange", "ghost");
+      
+        input.value = values[0] || min + (max - min) / 2;
+        ghost.value = values[1] || min + (max - min) / 2;
+      
+        input.parentNode.insertBefore(ghost, input.nextSibling);
+      
+        Object.defineProperty(input, "originalValue", descriptor.get ? descriptor : {
+          get: function() { return this.value; },
+          set: function(v) { this.value = v; }
+        });
+      
+        Object.defineProperties(input, {
+          valueLow: {
+            get: function() { return Math.min(this.originalValue, ghost.value); },
+            set: function(v) { this.originalValue = v; },
+            enumerable: true
+          },
+          valueHigh: {
+            get: function() { return Math.max(this.originalValue, ghost.value); },
+            set: function(v) { ghost.value = v; },
+            enumerable: true
+          }
+        });
+      
+        if (descriptor.get) {
+          Object.defineProperty(input, "value", {
+            get: function() { return this.valueLow + "," + this.valueHigh; },
+            set: function(v) {
+              var values = v.split(",");
+              this.valueLow = values[0];
+              this.valueHigh = values[1];
+              update();
+            },
+            enumerable: true
+          });
+        }
+      
+        if (typeof input.oninput === "function") {
+          ghost.oninput = input.oninput.bind(input);
+        }
+      
+        function update() {
+          var lowPercent = 100 * ((input.valueLow - min) / (max - min));
+          var highProcent = 100 * ((input.valueHigh - min) / (max - min));
+          ghost.style.setProperty("--low", lowPercent + "%");
+          ghost.style.setProperty("--high", highProcent + "%");
+          lowPrice.innerHTML = Math.round(lowPercent * max / 100);
+          highPrice.innerHTML = Math.round(highProcent * max / 100);
+        }
+      
+        input.addEventListener("input", update);
+        ghost.addEventListener("input", update);
+      
+        update();
+      }
+      
+      multirange.init = function() {
+        [].slice.call(document.querySelectorAll("input[type=range][multiple]:not(.multirange)")).forEach(multirange);
+      }
+      
+      if (document.readyState == "loading") {
+        document.addEventListener("DOMContentLoaded", multirange.init);
+      }
+      else {
+        multirange.init();
+      }
+      
+      })();
+      
+  </script>
 </body>
 
 
