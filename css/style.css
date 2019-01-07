@@ -404,7 +404,6 @@ img {
   color: #ffffff;
   list-style: none;
   margin-right: 20px;
-
 }
 
 .breadcrumbs {
@@ -414,24 +413,23 @@ img {
   margin: 0 auto;
   padding: 0px;
   outline: 1px solid red;
-}
-
-.breadcrumbs li {
-  position: relative;
-}
-
-.breadcrumbs {
   font-size: 14px;
   font-weight: normal;
 }
+
 .breadcrumbs-link {
   text-decoration:none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
 }
+
 .breadcrumbs-link-ending {
   text-decoration:none;
   cursor: default;
+}
+.breadcrumbs-separaite{
+  position: relative;
+  left: -10px;
 }
 
 .sale-wrapper {
@@ -494,7 +492,7 @@ img {
   border-radius: 50px;
 }
 .label-radio{
-  margin-left: 35px;
+  margin-left: 37px;
   margin-right: 1px;
   position: relative;
 }
@@ -607,7 +605,7 @@ input[type='range']::-webkit-slider-thumb{
 
  input[type="range"].multirange { 
   padding: 0;
-  margin: 10px 21px;
+  margin: 10px 14px;
   display: inline-block;
   vertical-align: top;
 }
@@ -912,8 +910,6 @@ input[type="range"].multirange.ghost {
   border-radius: 15px;
   width: 560px;
   height: 220px;
-
-  
 }
 
 .blog-news {
@@ -974,14 +970,14 @@ input[type="range"].multirange.ghost {
 }
 
 .input-email{
-    display: inline-block;
-    font-size: 16px;
-    width: 336px;
-    height: 42px;
-    border: 1px solid #d3d3d2;
-    border-radius: 5px;
-    padding: 0 15px;
-    margin-top: 18px;
+  display: inline-block;
+  font-size: 16px;
+  width: 336px;
+  height: 42px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 0 15px;
+  margin-top: 18px;
 }
 
 .contact-map {
@@ -1053,11 +1049,60 @@ input[type="range"].multirange.ghost {
   position: absolute;
   right: 15px;
 }
+.pagination-list{
+  float: right;
+  margin: 0;
+}
+
+.pagination-item{
+  list-style: none;
+  display: inline;
+  padding: 10px;
+}
+
+.pagination-item a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.pagination-item-current a {
+  color: #323232;
+  display: inline-block;
+}
+
+.pagination-item-current {
+  border-radius: 50%;
+  padding: 4px 10px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.pagination-item-current::before{
+  content: "";
+  background:url("../img/icon-left-small.png") no-repeat;
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  right: 38px;
+  top: 9px;
+}
+
+.pagination-item-current::after{
+  content: "";
+  background:url("../img/icon-right-small.png") no-repeat;
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  left: 178px;
+  top: 9px;
+}
+
 .modal-form {
   position: absolute;
   right: 450px;
   top: 65px;
-
   list-style: none;
   background-color: #f7f6f3;
   display: none;
@@ -1070,7 +1115,6 @@ input[type="range"].multirange.ghost {
   color: #848483;
   font-size: 16px;
   font-weight: normal;
-  
 }
 
 .login-input{
@@ -1081,7 +1125,6 @@ input[type="range"].multirange.ghost {
     margin-left: 5px;
     border: 1px solid grey;
     border-radius: 5px;
-
     padding: 0 15px;
 }
 
@@ -1089,7 +1132,6 @@ input[type="range"].multirange.ghost {
 .navigator-registration{
   display: inline-block;
   font-size: 13px;
-  
 }
 
 
@@ -1131,6 +1173,7 @@ input[type="range"].multirange.ghost {
   list-style-image: url("../img/heart.png");
   font-weight: bold; 
 }
+
 .footer-copyright {
   margin-top: 10px;
   position: relative;
@@ -1191,9 +1234,11 @@ input[type="range"].multirange.ghost {
 .breadcrumbs-container {
   min-height: 1300px;
 }
+
 .catalog-footer {
   border-top: rgba(169, 187, 177, 0.9) 1px solid;
 }
+
 .page-title {
   font-size: 35px;
 }
