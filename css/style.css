@@ -238,6 +238,19 @@ img {
   background-position: 50% 50%;
   left: 0;
   top: 0;
+  z-index: 1;
+}
+
+.nav-search:hover {
+  content: "";
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/magnifier-hover.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  left: 0;
+  top: 0;
+  z-index: 5;
 }
 .basket {
   position: relative;
@@ -459,6 +472,18 @@ img {
   border: #f6f8f7 2px solid;
   box-shadow: none;
 }
+.menu-selection-button:hover{
+  color:black;
+  background-color: #fbfcfb;
+}
+.menu-selection-button:active {
+  box-shadow: inset 0 2px 2px rgb(138, 139, 138);
+  border: none;
+  width: 144px;
+  height: 35px;
+  background-color: #eaeaea;
+}
+
  .catalog-selection-list{
   display: inline-block;
   font-weight: normal;
@@ -495,6 +520,7 @@ img {
   margin-left: 37px;
   margin-right: 1px;
   position: relative;
+  cursor: pointer;
 }
 .filter-input-radio + label::before {
   content: "";
@@ -574,6 +600,8 @@ img {
   width: 193px;
   font-size: 16px;
   color: #323232;
+}
+.menu-catalog-select:active{
   background:url("../img/icon-down-dir-act.png");
 }
 
@@ -601,6 +629,7 @@ input[type='range']::-webkit-slider-thumb{
   height: 22px;
   background-image:url("../img/filter-button.png");
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
  input[type="range"].multirange { 
@@ -1241,4 +1270,68 @@ input[type="range"].multirange.ghost {
 
 .page-title {
   font-size: 35px;
+}
+
+.modal {
+  position: fixed;
+  color: #000000;
+  background-color: #f8f7f4;
+  border-radius: 10px;
+  display: none;
+}
+
+.feedback-modal {
+  top: 120px;
+  left: 50%;
+  margin-left: -230px;
+  width: 429px;
+  padding: 25px 21px;
+}
+.feedback-text {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.feedback-form-textarea {
+  color: #9E9E9E;
+  font-size: 16px;
+  width: 394px;
+  font-weight: normal;
+  border-radius: 5px;
+  padding: 16px;
+  border: #d3d3d2 1px solid;
+  height: 120px;
+}
+.feedback-input {
+  width: 266px;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+.modal-close {
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  cursor: pointer;
+  background: url("../img/Х-big.png") no-repeat;
+  position: absolute;
+  top: 15px;
+  right: 12px;
+}
+.feedback-button {
+  float:right;
+  margin: 7px 3px 0 0;
+  width: 137px;
+  height: 45px;
+}
+
+.feedback-notebook{
+  margin-bottom: 12px;
+  margin-top: 20px;
+}
+
+.modal-show {
+  display: block;
 }

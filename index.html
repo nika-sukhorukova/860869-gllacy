@@ -312,23 +312,23 @@
         </div>
       </footer>
 
-      <section class="visually-hidden">
-        <h2 class="visually-hidden">Мы обязательно вам ответим!</h2>
+      <section class="feedback-modal modal">
+        <h2 class="feedback-text">Мы обязательно вам ответим!</h2>
         <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
-        <form class="Feedback-form" action="#" method="POST">
-          <p class="Feedback-name">
-            <label for="name">Ваше имя</label>
-            <input type="text" name="name" id="name" placeholder="Как вас зовут?">
+        <form class="feedback-form" action="#" method="POST">
+          <p class="feedback-name">
+            <label class="visually-hidden" for="name">Ваше имя</label>
+            <input class="feedback-form-textarea feedback-input" type="text" name="name" id="name" placeholder="Как вас зовут?">
           </p>
-          <p class="Feedback-email">
-            <label for="email">Ваш e-mail</label>
-            <input type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
+          <p class="feedback-email">
+            <label class="visually-hidden" for="email">Ваш e-mail</label>
+            <input class="feedback-input feedback-form-textarea" type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
           </p>
-          <p class="Feedback-notebook">
-            <label for="note">Форма заметки</label>
-            <textarea class="Feedback-form-textarea" id="note" name="note" rows="9" placeholder="Напишите что-нибудь..."></textarea>
+          <p class="feedback-notebook">
+            <label class="visually-hidden" for="note">Форма заметки</label>
+            <textarea class="feedback-form-textarea" id="note" name="note" rows="9" placeholder="Напишите что-нибудь..."></textarea>
           </p>
-          <button type="submit">Отправить</button>
+          <button class="button-link feedback-button" type="submit">Отправить</button>
         </form>
       </section>
 
@@ -352,6 +352,19 @@
     </div>
   </div>
   <script>
+    var button = document.querySelector(".feedback");
+
+    var popup = document.querySelector(".feedback-modal");
+    var close = popup.querySelector(".modal-close");
+
+
+    button.addEventListener("click", function (evt) {
+      popup.classList.add("modal-show");  
+  });
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+  });
   </script>
 </body>
 
