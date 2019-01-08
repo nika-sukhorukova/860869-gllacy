@@ -976,7 +976,7 @@ input[type="range"].multirange.ghost {
   position: relative;
   
 }
-.email-admit{
+.email-admit{ 
   padding: 0;
   margin-left: 10px;
   font-weight: bold;
@@ -1108,6 +1108,10 @@ input[type="range"].multirange.ghost {
   position: relative;
 }
 
+.pagination-item:hover{
+
+}
+
 .pagination-item-current::before{
   content: "";
   background:url("../img/icon-left-small.png") no-repeat;
@@ -1130,15 +1134,12 @@ input[type="range"].multirange.ghost {
 
 .modal-form {
   position: absolute;
-  right: 450px;
-  top: 65px;
+  right: 283px;
+  top: 84px;
   list-style: none;
   background-color: #f7f6f3;
   display: none;
-  opacity: 0%;
-  min-width: 278px;
-  min-height: 213;
-  padding: 21px;
+  padding: 4px 15px;
   box-sizing: border-box;
   border-radius: 5px;
   color: #848483;
@@ -1146,21 +1147,62 @@ input[type="range"].multirange.ghost {
   font-weight: normal;
 }
 
+.search-form{
+  position: absolute;
+  right: 376px;
+  top: 59px;
+  list-style: none;
+  background-color: #f7f6f3;
+  display: block;
+  min-width: 340px;
+  padding: 4px 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #848483;
+  font-size: 16px;
+  font-weight: normal;
+}
+.search-input{
+  width: 281px;
+  height:42px;
+  border-radius: 5px;
+  border: 1px solid #d3d3d2;
+  padding: 0 15px;
+}
+
 .login-input{
-    display: inline-block;
-    font-size: 16px;
-    width: 242px;
-    height: 43px;
-    margin-left: 5px;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 0 15px;
+  display: inline-block;
+  font-size: 16px;
+  width: 242px;
+  height: 43px;
+  margin-left: 5px;
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+  padding: 0 15px;
+}
+.entrance-form {
+  float: right;
+  height: 35px;
+  width: 124px;
+  margin-top: 0px;
+}
+
+.entrance-form a{
+  color: #000000;
+  text-decoration: none;
+}
+
+.button-entrance{
+  float: left;
+  min-width: 113px;
+  padding: 11px 17px;
+  margin-bottom: 16px;
 }
 
 .navigator-password-recovery,
 .navigator-registration{
-  display: inline-block;
   font-size: 13px;
+  border-bottom: #000000 1px solid;
 }
 
 
