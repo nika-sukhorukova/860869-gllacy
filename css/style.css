@@ -107,6 +107,7 @@ img {
 
 .user-navigation__item {
   margin-left: 8px;
+  position: relative;
 }
 
 .user-navigation a {
@@ -196,12 +197,32 @@ img {
   background-position: 50% 50%;
 }
 
+.search-input-form {
+  position: absolute;
+  right: 0px;
+  top: 36px;
+}
+
+.search-form {
+  list-style: none;
+  background-color: #f7f6f3;
+  display: none;
+  min-width: 340px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #848483;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .user-entrance {
   display: block;
   background-color: rgba(255, 255, 255, 0.32);
   border-radius: 40px;
   padding: 8px 16px;
   color: #ffffff;
+  position: relative;
 }
 
 .basket {
@@ -237,15 +258,6 @@ img {
 .user-entrance-mouseover {
   background: url("../img/entrance-hover.png");
   color: black;
-}
-
-.nav-search::before {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 0;
-  top: 0;
 }
 
 .nav-search:hover {
@@ -887,7 +899,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   font-size: 16px;
   line-height: 22px;
   list-style: none;
-  width: calc(50% - 60px);
+  width: calc(50% - 78px);
   padding-left: 60px;
   font-weight: normal;
 }
@@ -1061,16 +1073,17 @@ input[type="range"].multirange.ghost::-moz-range-track {
   position: absolute;
   right: 15px;
 }
-.pagination-section{
+
+.pagination-section {
   display: block;
   position: relative;
   margin-top: 104px;
 }
 
 .pagination-list {
- position: absolute;
- right: -4px;
- bottom: 14px;
+  position: absolute;
+  right: -4px;
+  bottom: 14px;
 }
 
 .pagination-item {
@@ -1084,6 +1097,14 @@ input[type="range"].multirange.ghost::-moz-range-track {
   color: #ffffff;
   font-weight: normal;
   font-size: 16px;
+}
+
+.pagination-item:hover {
+  border-radius: 50%;
+  padding: 4px 10px;
+  background-color: #ffffff;
+  position: relative;
+
 }
 
 .pagination-item-current a {
@@ -1118,37 +1139,6 @@ input[type="range"].multirange.ghost::-moz-range-track {
   position: absolute;
   left: 178px;
   top: 9px;
-}
-
-.modal-form {
-  position: absolute;
-  right: 160px;
-  top: 59px;
-  list-style: none;
-  background-color: #f7f6f3;
-  display: none;
-  padding: 4px 15px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: #848483;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.search-form {
-  position: absolute;
-  right: 160px;
-  top: 59px;
-  list-style: none;
-  background-color: #f7f6f3;
-  display: none;
-  min-width: 340px;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  color: #848483;
-  font-size: 16px;
-  font-weight: normal;
 }
 
 .search-input {
@@ -1365,8 +1355,19 @@ input[type="range"].multirange.ghost::-moz-range-track {
   margin-top: 20px;
 }
 
-.modal-show {
-  display: block;
+.modal-form {
+  position: absolute;
+  right: 160px;
+  top: 59px;
+  list-style: none;
+  background-color: #f7f6f3;
+  display: none;
+  padding: 4px 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #848483;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .basket-form {
@@ -1377,7 +1378,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   min-height: 229px;
   min-width: 520px;
   padding: 7px 11px;
-  display: block;
+  display: none;
 }
 
 .basket-item {
@@ -1388,6 +1389,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   margin-bottom: 20px;
   position: relative;
 }
+
 .order-button {
   position: absolute;
   bottom: 27px;
@@ -1413,7 +1415,6 @@ input[type="range"].multirange.ghost::-moz-range-track {
   font-size: 15px;
 }
 
-
 .table-weight {
   width: 95px;
 }
@@ -1432,10 +1433,15 @@ input[type="range"].multirange.ghost::-moz-range-track {
   width: 33px;
   height: 33px;
 }
+
 .cross {
   background: url("../img/cross.png") no-repeat;
   width: 11px;
   height: 11px;
   background-position: 2px 16px;
   padding: 6px;
+}
+
+.modal-show {
+  display: block;
 }

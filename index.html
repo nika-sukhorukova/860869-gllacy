@@ -45,6 +45,12 @@
           <ul class="user-navigation">
             <li class="user-navigation__item">
               <a class="nav-search search-button" href="#"></a>
+              <section class="search-input-form">
+                <form class="search-form" action="#" method="POST">
+                  <label for="email-entrance" aria-label="Ваш e-mail"></label>
+                  <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
+                  <form>
+              </section>
             </li>
             <li class="user-navigation__item">
               <a class="user-entrance entrance-button" href="login.html">Вход</a>
@@ -170,7 +176,7 @@
             <li class="info-list ice-cream-icon">
               <h3 class="visually-hidden">Собственное производство</h3>
               <p class="manufacture">Все наше мороженое изготавливается на собственном производстве, с использованием
-                современногооборудования и проверенных временем технологий.</p>
+                современного оборудования и проверенных временем технологий.</p>
             </li>
             <li class="info-list leaf-icon">
               <h3 class="visually-hidden">Качество сырья</h3>
@@ -317,7 +323,6 @@
           </p>
         </div>
       </footer>
-
       <section class="feedback-modal modal">
         <h2 class="feedback-text">Мы обязательно вам ответим!</h2>
         <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
@@ -337,7 +342,6 @@
           <button class="button-link feedback-button" type="submit">Отправить</button>
         </form>
       </section>
-
       <section>
         <form class="modal-form" action="#" method="POST">
           <p>
@@ -355,12 +359,6 @@
           <button class="button-link button-entrance" type="submit">Войти</button>
         </form>
       </section>
-      <section class="search-input-form">
-        <form class="search-form" action="#" method="POST">
-          <label for="email-entrance" aria-label="Ваш e-mail"></label>
-          <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
-          <form>
-      </section>
     </div>
   </div>
   <script>
@@ -371,7 +369,9 @@
 
 
     button.addEventListener("click", function (evt) {
+      evt.preventDefault();
       popup.classList.add("modal-show");
+
     });
     close.addEventListener("click", function (evt) {
       popup.classList.remove("modal-show");

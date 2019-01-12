@@ -41,11 +41,17 @@
         <ul class="user-navigation">
           <li class="user-navigation__item">
             <a class="nav-search search-button" href="#"></a>
+            <section class="search-input-form">
+              <form class="search-form" action="#" method="POST">
+                <label for="email-entrance" aria-label="Ваш e-mail"></label>
+                <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
+                <form>
+            </section>
           </li>
           <li class="user-navigation__item">
             <a class="user-entrance entrance-button" href="login.html">Вход</a>
           </li>
-          <li class="user-navigation__item">
+          <li class="user-navigation__item cart-button">
             <a class="basket full-basket" href="cart.html">2 товара</a>
           </li>
         </ul>
@@ -350,55 +356,50 @@
         </p>
       </div>
     </footer>
+    <section>
+      <form class="modal-form" action="#" method="POST">
+        <p>
+          <label for="email-entrance" aria-label="Ваш e-mail"></label>
+          <input class="login-input" type="text" id="email-entrance" name="name" placeholder="e-mail">
+        </p>
+        <p>
+          <label for="navigator-password" aria-label="Пароль"></label>
+          <input class="login-input" type="text" id="navigator-password" name="password" placeholder="Пароль">
+        </p>
+        <p class="entrance-form">
+          <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
+          <a class="navigator-registration" href="#">Новая регистрация</a>
+        </p>
+        <button class="button-link button-entrance" type="submit">Войти</button>
+      </form>
+    </section>
+    <section class="modal basket-form">
+      <h3 class="visually-hidden">Корзина</h3>
+      <table class="cart-table">
+        <th class="visually-hidden">Изображение</th>
+        <th class="visually-hidden">Товары</th>
+        <th class="visually-hidden">Вес и стоимость</th>
+        <th class="visually-hidden">Сумма</th>
+        <tr class="basket-item">
+          <td class="cross"></td>
+          <td class="table-image"><img src="img/ice-cream-cart.png" alt="Пломбир с апельсиновым джемом"></td>
+          <td class="table-item">Пломбир с апельсиновым джемом</td>
+          <td class="table-weight">1,5кг х<span class="table-price">200 руб.</span></td>
+          <td class="row-total">300 руб.</td>
+        </tr>
+        <tr class="basket-item">
+          <td class="cross"></td>
+          <td class="table-image"><img src="img/ice-cream-cart1.png" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+          <td class="table-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+          <td class="table-weight">1,5кг х<span class="table-price">300 руб.</span></td>
+          <td class="row-total">450 руб.</td>
+        </tr>
+      </table>
+      <span class="total-price">Итого: 750 руб.</span>
+      <button class="button-link order-button">Оформить заказ</button>
+    </section>
+    </div>
   </div>
-  <section>
-    <form class="modal-form" action="#" method="POST">
-      <p>
-        <label for="email-entrance" aria-label="Ваш e-mail"></label>
-        <input class="login-input" type="text" id="email-entrance" name="name" placeholder="e-mail">
-      </p>
-      <p>
-        <label for="navigator-password" aria-label="Пароль"></label>
-        <input class="login-input" type="text" id="navigator-password" name="password" placeholder="Пароль">
-      </p>
-      <p class="entrance-form">
-        <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
-        <a class="navigator-registration" href="#">Новая регистрация</a>
-      </p>
-      <button class="button-link button-entrance" type="submit">Войти</button>
-    </form>
-  </section>
-  <section class="search-input-form">
-    <form class="search-form" action="#" method="POST">
-      <label for="email-entrance" aria-label="Ваш e-mail"></label>
-      <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
-      <form>
-  </section>
-  <section class="modal basket-form">
-    <h3 class="visually-hidden">Корзина</h3>
-    <table class="cart-table">
-      <th class="visually-hidden">Изображение</th>
-      <th class="visually-hidden">Товары</th>
-      <th class="visually-hidden">Вес и стоимость</th>
-      <th class="visually-hidden">Сумма</th>
-      <tr class="basket-item">
-        <td class="cross"></td>
-        <td class="table-image"><img src="img/ice-cream-cart.png" alt="Пломбир с апельсиновым джемом"></td>
-        <td class="table-item">Пломбир с апельсиновым джемом</td>
-        <td class="table-weight">1,5кг х<span class="table-price">200 руб.</span></td>
-        <td class="row-total">300 руб.</td>
-      </tr>
-      <tr class="basket-item">
-        <td class="cross"></td>
-        <td class="table-image"><img src="img/ice-cream-cart1.png" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-        <td class="table-item">Клубничный пломбир с присыпкой из белого шоколада</td>
-        <td class="table-weight">1,5кг х<span class="table-price">300 руб.</span></td>
-        <td class="row-total">450 руб.</td>
-      </tr>
-    </table>
-    <span class="total-price">Итого: 750 руб.</span>
-    <button class="button-link order-button">Оформить заказ</button>
-  </section>
   <script>
     (function () {
       "use strict";
@@ -492,19 +493,19 @@
     })();  
   </script>
   <script>
-    var linkSearch = document.querySelector(".search-button");
-    var buttonSearch = document.querySelector(".nav-search")
+    var button = document.querySelector(".feedback");
 
-    var popupSearch = document.querySelector(".search-form");
-    var closeSerch = document.querySelector(".search-button");
+    var popup = document.querySelector(".feedback-modal");
+    var close = popup.querySelector(".modal-close");
 
-    linkSearch.addEventListener("mouseover", function (evt) {
-      buttonSearch.classList.add("nav-search-mouseover");
-      popupSearch.classList.add("modal-show");
+
+    button.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+
     });
-    closeSerch.addEventListener("click", function (evt) {
-      popupSearch.classList.remove("modal-show");
-      buttonSearch.classList.remove("nav-search-mouseover");
+    close.addEventListener("click", function (evt) {
+      popup.classList.remove("modal-show");
     });
   </script>
   <script>
@@ -522,6 +523,21 @@
       evt.preventDefault();
       popupEntrance.classList.remove("modal-show");
       button__Entrance.classList.remove("user-entrance-mouseover");
+    });
+  </script>
+  <script>
+    var linkCart = document.querySelector(".cart-button");
+    var button__Cart = document.querySelector(".full-basket")
+
+    var popupCart = document.querySelector(".basket-form");
+    var closeCart = document.querySelector(".cart-button");
+
+    linkCart.addEventListener("mouseover", function (evt) {
+      popupCart.classList.add("modal-show");
+    });
+    closeCart.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popupCart.classList.remove("modal-show");
     });
   </script>
 </body>
