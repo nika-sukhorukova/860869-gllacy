@@ -76,11 +76,13 @@
             <section class="modal basket-form">
               <h3 class="visually-hidden">Корзина</h3>
               <table class="cart-table">
-                <th class="visually-hidden">Изображение</th>
-                <th class="visually-hidden">Товары</th>
-                <th class="visually-hidden">Вес и стоимость</th>
-                <th class="visually-hidden">Сумма</th>
-                <tr class="basket-item">
+                <tr>
+                  <th class="visually-hidden">Изображение</th>
+                  <th class="visually-hidden">Товары</th>
+                  <th class="visually-hidden">Вес и стоимость</th>
+                  <th class="visually-hidden">Сумма</th>
+                </tr>
+                  <tr class="basket-item">
                   <td class="cross"></td>
                   <td class="table-image"><img src="img/ice-cream-cart.png" alt="Пломбир с апельсиновым джемом"></td>
                   <td class="table-item">Пломбир с апельсиновым джемом</td>
@@ -136,11 +138,12 @@
               <label class="catalog-label" for="price">Цена: <span class="js-low-price">100</span> руб.- <span class="js-high-price">500</span>
                 руб.</label>
               <span class="menu-selection-list">
-                <input multiple type="range" id="price" name="price" min="0" max="700" value="100,500">
+                <!-- <input multiple  type="range" id="price" name="price" min="0" max="700"> Раскоментить для сортировщика-->
+                <input  type="range" id="price" name="price" min="0" max="700">
               </span>
             </li>
             <li class="catalog-selection-list">
-              <label class="catalog-label" for="consistency">Жирность:</label>
+              <span class="catalog-label">Жирность:</span>
               <span class="menu-selection-list menu-selection-list-consistency">
                 <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="0%" id="zero">
                 <label class="label-radio" for="zero">0%</label>
@@ -148,13 +151,13 @@
                   checked>
                 <label class="label-radio" for="ten">до 10%</label>
                 <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="до 30%" id="thirty">
-                <label class="label-radio" for="thirty">до 30%</label>
+                <label class="label-radio" for="thirty">до 30%</label> 
                 <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="выше 30%" id="up-thirty">
                 <label class="label-radio" for="up-thirty">выше 30%</label>
               </span>
             </li>
             <li class="catalog-selection-list">
-              <label class="catalog-label"> Наполнители:</label>
+              <span class="catalog-label"> Наполнители:</span>
               <span class="menu-selection-list">
                 <input class="checkbox visually-hidden" type="checkbox" name="шоколадные" id="choco" checked>
                 <label for="choco">шоколадные</label>
@@ -316,7 +319,7 @@
             <a class="social-button" href="https://twitter.com/" title="Twitter">
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                <g id="Layer_1">
+                <g id="Layer_dfdd1">
                 </g>
                 <g id="Layer_2">
                   <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z
@@ -331,7 +334,7 @@
           </li>
           <li class="social-button-list">
             <a class="social-button" href="https://www.instagram.com/gllacy-ice" title="Instagram">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              <svg version="1.1" id="Layer_fdfd1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
                 xml:space="preserve">
                 <g>
@@ -348,7 +351,7 @@
           </li>
           <li class="social-button-list">
             <a class="social-button" href="https://www.facebook.com/" title="Facebook">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              <svg version="1.1" id="Layer_kljj" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
                 xml:space="preserve">
                 <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
@@ -357,7 +360,7 @@
           </li>
           <li class="social-button-list">
             <a class="social-button" href="https://vk.com/" title="Vkontakte">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              <svg version="1.1" id="Layer_klln" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
                 xml:space="preserve">
                 <g>
@@ -399,7 +402,6 @@
         </p>
       </div>
     </footer>
-  </div>
   </div>
   <script src="js/script-min.js"></script>
   <script src="js/scrip-catalog-min.js"></script>
