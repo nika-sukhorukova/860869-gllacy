@@ -40,19 +40,64 @@
         </ul>
         <ul class="user-navigation">
           <li class="user-navigation__item">
+            <div class="close-modal js-close-modal"></div>
             <a class="nav-search search-button" href="#"></a>
             <section class="search-input-form">
               <form class="search-form" action="#" method="POST">
                 <label for="email-entrance" aria-label="Ваш e-mail"></label>
                 <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
-                <form>
+              </form>
             </section>
           </li>
           <li class="user-navigation__item">
-            <a class="user-entrance entrance-button" href="login.html">Вход</a>
+            <a class="user-entrance js-entrance-button" href="login.html">Вход</a>
+            <div class="close-modal js-close-modal"></div>
+            <section>
+              <form class="modal-form" action="#" method="POST">
+                <p>
+                  <label for="email-entrance" aria-label="Ваш e-mail"></label>
+                  <input class="login-input" type="text" id="email-entrance" name="name" placeholder="e-mail">
+                </p>
+                <p>
+                  <label for="navigator-password" aria-label="Пароль"></label>
+                  <input class="login-input" type="text" id="navigator-password" name="password" placeholder="Пароль">
+                </p>
+                <p class="entrance-form">
+                  <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
+                  <a class="navigator-registration" href="#">Новая регистрация</a>
+                </p>
+                <button class="button-link button-entrance" type="submit">Войти</button>
+              </form>
+            </section>
           </li>
-          <li class="user-navigation__item cart-button">
+          <li class="user-navigation__item js-cart-button">
             <a class="basket full-basket" href="cart.html">2 товара</a>
+            <div class="close-modal js-close-modal"></div>
+            <section class="modal basket-form">
+              <h3 class="visually-hidden">Корзина</h3>
+              <table class="cart-table">
+                <th class="visually-hidden">Изображение</th>
+                <th class="visually-hidden">Товары</th>
+                <th class="visually-hidden">Вес и стоимость</th>
+                <th class="visually-hidden">Сумма</th>
+                <tr class="basket-item">
+                  <td class="cross"></td>
+                  <td class="table-image"><img src="img/ice-cream-cart.png" alt="Пломбир с апельсиновым джемом"></td>
+                  <td class="table-item">Пломбир с апельсиновым джемом</td>
+                  <td class="table-weight">1,5кг х<span class="table-price">200 руб.</span></td>
+                  <td class="row-total">300 руб.</td>
+                </tr>
+                <tr class="basket-item">
+                  <td class="cross"></td>
+                  <td class="table-image"><img src="img/ice-cream-cart1.png" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                  <td class="table-item">Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td class="table-weight">1,5кг х<span class="table-price">300 руб.</span></td>
+                  <td class="row-total">450 руб.</td>
+                </tr>
+              </table>
+              <span class="total-price">Итого: 750 руб.</span>
+              <button class="button-link order-button">Оформить заказ</button>
+            </section>
           </li>
         </ul>
       </nav>
@@ -169,7 +214,6 @@
               </p>
               <a class="button-link hidden" href="#">Быстрый просмотр</a>
             </a>
-            </a>
           </li>
           <li class="catalog-product">
             <a class="catalog-product__link" href="catalog-item.html">
@@ -270,7 +314,6 @@
         <ul class="social-news">
           <li class="social-button-list">
             <a class="social-button" href="#" alt="Twitter">
-              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                 y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <g id="Layer_1">
@@ -314,7 +357,6 @@
           </li>
           <li class="social-button-list">
             <a class="social-button" href="#" alt="Vkontakte">
-              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
                 xml:space="preserve">
@@ -332,7 +374,8 @@
                     c0.26,0.455,0.392,0.975,0.392,1.558c0,0.678-0.179,1.278-0.536,1.795c-0.358,0.518-0.863,0.92-1.517,1.208v0.075
                     c0.917,0.182,1.642,0.559,2.179,1.13c0.537,0.571,0.807,1.325,0.807,2.261C23.013,19.392,22.875,19.997,22.602,20.531z" />
                 </g>
-              </svg></a>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
@@ -356,191 +399,9 @@
         </p>
       </div>
     </footer>
-    <section>
-      <form class="modal-form" action="#" method="POST">
-        <p>
-          <label for="email-entrance" aria-label="Ваш e-mail"></label>
-          <input class="login-input" type="text" id="email-entrance" name="name" placeholder="e-mail">
-        </p>
-        <p>
-          <label for="navigator-password" aria-label="Пароль"></label>
-          <input class="login-input" type="text" id="navigator-password" name="password" placeholder="Пароль">
-        </p>
-        <p class="entrance-form">
-          <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
-          <a class="navigator-registration" href="#">Новая регистрация</a>
-        </p>
-        <button class="button-link button-entrance" type="submit">Войти</button>
-      </form>
-    </section>
-    <section class="modal basket-form">
-      <h3 class="visually-hidden">Корзина</h3>
-      <table class="cart-table">
-        <th class="visually-hidden">Изображение</th>
-        <th class="visually-hidden">Товары</th>
-        <th class="visually-hidden">Вес и стоимость</th>
-        <th class="visually-hidden">Сумма</th>
-        <tr class="basket-item">
-          <td class="cross"></td>
-          <td class="table-image"><img src="img/ice-cream-cart.png" alt="Пломбир с апельсиновым джемом"></td>
-          <td class="table-item">Пломбир с апельсиновым джемом</td>
-          <td class="table-weight">1,5кг х<span class="table-price">200 руб.</span></td>
-          <td class="row-total">300 руб.</td>
-        </tr>
-        <tr class="basket-item">
-          <td class="cross"></td>
-          <td class="table-image"><img src="img/ice-cream-cart1.png" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-          <td class="table-item">Клубничный пломбир с присыпкой из белого шоколада</td>
-          <td class="table-weight">1,5кг х<span class="table-price">300 руб.</span></td>
-          <td class="row-total">450 руб.</td>
-        </tr>
-      </table>
-      <span class="total-price">Итого: 750 руб.</span>
-      <button class="button-link order-button">Оформить заказ</button>
-    </section>
-    </div>
   </div>
-  <script>
-    (function () {
-      "use strict";
-
-      var supportsMultiple = self.HTMLInputElement && "valueLow" in HTMLInputElement.prototype;
-
-      var descriptor = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
-
-      self.multirange = function (input) {
-        if (supportsMultiple || input.classList.contains("multirange")) {
-          return;
-        }
-
-        var value = input.getAttribute("value");
-        var values = value === null ? [] : value.split(",");
-        var min = +(input.min || 0);
-        var max = +(input.max || 100);
-        var ghost = input.cloneNode();
-        var lowPrice = document.querySelector('.js-low-price');
-        var highPrice = document.querySelector('.js-high-price');
-
-        input.classList.add("multirange", "original");
-        ghost.classList.add("multirange", "ghost");
-
-        input.value = values[0] || min + (max - min) / 2;
-        ghost.value = values[1] || min + (max - min) / 2;
-
-        input.parentNode.insertBefore(ghost, input.nextSibling);
-
-        Object.defineProperty(input, "originalValue", descriptor.get ? descriptor : {
-          get: function () { return this.value; },
-          set: function (v) { this.value = v; }
-        });
-
-        Object.defineProperties(input, {
-          valueLow: {
-            get: function () { return Math.min(this.originalValue, ghost.value); },
-            set: function (v) { this.originalValue = v; },
-            enumerable: true
-          },
-          valueHigh: {
-            get: function () { return Math.max(this.originalValue, ghost.value); },
-            set: function (v) { ghost.value = v; },
-            enumerable: true
-          }
-        });
-
-        if (descriptor.get) {
-          Object.defineProperty(input, "value", {
-            get: function () { return this.valueLow + "," + this.valueHigh; },
-            set: function (v) {
-              var values = v.split(",");
-              this.valueLow = values[0];
-              this.valueHigh = values[1];
-              update();
-            },
-            enumerable: true
-          });
-        }
-
-        if (typeof input.oninput === "function") {
-          ghost.oninput = input.oninput.bind(input);
-        }
-
-        function update() {
-          var lowPercent = 100 * ((input.valueLow - min) / (max - min));
-          var highProcent = 100 * ((input.valueHigh - min) / (max - min));
-          ghost.style.setProperty("--low", lowPercent + "%");
-          ghost.style.setProperty("--high", highProcent + "%");
-          lowPrice.innerHTML = Math.round(lowPercent * max / 100);
-          highPrice.innerHTML = Math.round(highProcent * max / 100);
-        }
-
-        input.addEventListener("input", update);
-        ghost.addEventListener("input", update);
-
-        update();
-      }
-
-      multirange.init = function () {
-        [].slice.call(document.querySelectorAll("input[type=range][multiple]:not(.multirange)")).forEach(multirange);
-      }
-
-      if (document.readyState == "loading") {
-        document.addEventListener("DOMContentLoaded", multirange.init);
-      }
-      else {
-        multirange.init();
-      }
-
-    })();  
-  </script>
-  <script>
-    var button = document.querySelector(".feedback");
-
-    var popup = document.querySelector(".feedback-modal");
-    var close = popup.querySelector(".modal-close");
-
-
-    button.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-    });
-    close.addEventListener("click", function (evt) {
-      popup.classList.remove("modal-show");
-    });
-  </script>
-  <script>
-    var linkEntrance = document.querySelector(".entrance-button");
-    var button__Entrance = document.querySelector(".user-entrance")
-
-    var popupEntrance = document.querySelector(".modal-form");
-    var closeEntrance = document.querySelector(".entrance-button");
-
-    linkEntrance.addEventListener("mouseover", function (evt) {
-      button__Entrance.classList.add("user-entrance-mouseover");
-      popupEntrance.classList.add("modal-show");
-    });
-    closeEntrance.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popupEntrance.classList.remove("modal-show");
-      button__Entrance.classList.remove("user-entrance-mouseover");
-    });
-  </script>
-  <script>
-    var linkCart = document.querySelector(".cart-button");
-    var button__Cart = document.querySelector(".full-basket")
-
-    var popupCart = document.querySelector(".basket-form");
-    var closeCart = document.querySelector(".cart-button");
-
-    linkCart.addEventListener("mouseover", function (evt) {
-      popupCart.classList.add("modal-show");
-    });
-    closeCart.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popupCart.classList.remove("modal-show");
-    });
-  </script>
+  </div>
+  <script src="js/script-min.js"></script>
+  <script src="js/scrip-catalog-min.js"></script>
 </body>
-
-
 </html>

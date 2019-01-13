@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 
@@ -44,16 +44,35 @@
           </ul>
           <ul class="user-navigation">
             <li class="user-navigation__item">
+              <div class="close-modal js-close-modal"></div>
               <a class="nav-search search-button" href="#"></a>
               <section class="search-input-form">
                 <form class="search-form" action="#" method="POST">
                   <label for="email-entrance" aria-label="Ваш e-mail"></label>
                   <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
-                  <form>
+                </form>
               </section>
             </li>
             <li class="user-navigation__item">
-              <a class="user-entrance entrance-button" href="login.html">Вход</a>
+              <a class="user-entrance js-entrance-button" href="login.html">Вход</a>
+              <div class="close-modal js-close-modal"></div>
+              <section>
+                <form class="modal-form" action="#" method="POST">
+                  <p>
+                    <label for="email-entrance" aria-label="Ваш e-mail"></label>
+                    <input class="login-input" type="text" id="email-entrance" name="name" placeholder="e-mail">
+                  </p>
+                  <p>
+                    <label for="navigator-password" aria-label="Пароль"></label>
+                    <input class="login-input" type="text" id="navigator-password" name="password" placeholder="Пароль">
+                  </p>
+                  <p class="entrance-form">
+                    <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
+                    <a class="navigator-registration" href="#">Новая регистрация</a>
+                  </p>
+                  <button class="button-link button-entrance" type="submit">Войти</button>
+                </form>
+              </section>
             </li>
             <li class="user-navigation__item">
               <a class="basket" href="cart.html">Пусто</a>
@@ -231,13 +250,12 @@
         </section>
       </main>
 
-      <footer class="main-footer">
+      <footer class="main-footer main-index-footer">
         <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <div class="footer-social">
           <ul class="social-news">
             <li class="social-button-list">
               <a class="social-button" href="#" alt="Twitter">
-                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
                   y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                   <g id="Layer_1">
@@ -281,7 +299,6 @@
             </li>
             <li class="social-button-list">
               <a class="social-button" href="#" alt="Vkontakte">
-                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
                   xml:space="preserve">
@@ -323,9 +340,10 @@
           </p>
         </div>
       </footer>
-      <section class="feedback-modal modal">
+      <div class="feedback-overlay js-feedback-overlay"></div>
+      <section class="modal feedback-modal">
         <h2 class="feedback-text">Мы обязательно вам ответим!</h2>
-        <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
+        <button class="modal-close js-modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
         <form class="feedback-form" action="#" method="POST">
           <p class="feedback-name">
             <label class="visually-hidden" for="name">Ваше имя</label>
@@ -342,75 +360,9 @@
           <button class="button-link feedback-button" type="submit">Отправить</button>
         </form>
       </section>
-      <section>
-        <form class="modal-form" action="#" method="POST">
-          <p>
-            <label for="email-entrance" aria-label="Ваш e-mail"></label>
-            <input class="login-input" type="text" id="email-entrance" name="name" placeholder="e-mail">
-          </p>
-          <p>
-            <label for="navigator-password" aria-label="Пароль"></label>
-            <input class="login-input" type="text" id="navigator-password" name="password" placeholder="Пароль">
-          </p>
-          <p class="entrance-form">
-            <a class="navigator-password-recovery" href="#">Забыли пароль?</a>
-            <a class="navigator-registration" href="#">Новая регистрация</a>
-          </p>
-          <button class="button-link button-entrance" type="submit">Войти</button>
-        </form>
-      </section>
     </div>
   </div>
-  <script>
-    var button = document.querySelector(".feedback");
-
-    var popup = document.querySelector(".feedback-modal");
-    var close = popup.querySelector(".modal-close");
-
-
-    button.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popup.classList.add("modal-show");
-
-    });
-    close.addEventListener("click", function (evt) {
-      popup.classList.remove("modal-show");
-    });
-  </script>
-  <script>
-    var linkSearch = document.querySelector(".search-button");
-    var buttonSearch = document.querySelector(".nav-search")
-
-    var popupSearch = document.querySelector(".search-form");
-    var closeSerch = document.querySelector(".search-button");
-
-    linkSearch.addEventListener("mouseover", function (evt) {
-      buttonSearch.classList.add("nav-search-mouseover");
-      popupSearch.classList.add("modal-show");
-    });
-    closeSerch.addEventListener("click", function (evt) {
-      popupSearch.classList.remove("modal-show");
-      buttonSearch.classList.remove("nav-search-mouseover");
-    });
-  </script>
-  <script>
-    var linkEntrance = document.querySelector(".entrance-button");
-    var button__Entrance = document.querySelector(".user-entrance")
-
-    var popupEntrance = document.querySelector(".modal-form");
-    var closeEntrance = document.querySelector(".entrance-button");
-
-    linkEntrance.addEventListener("mouseover", function (evt) {
-      button__Entrance.classList.add("user-entrance-mouseover");
-      popupEntrance.classList.add("modal-show");
-    });
-    closeEntrance.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      popupEntrance.classList.remove("modal-show");
-      button__Entrance.classList.remove("user-entrance-mouseover");
-    });
-  </script>
-
+  <script src="js/script-min.js"></script>
 </body>
 
 </html>

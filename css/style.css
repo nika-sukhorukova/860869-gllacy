@@ -15,7 +15,6 @@ body {
   margin: 0 auto;
   padding-left: 27px;
   padding-right: 27px;
-  outline: 1px solid red;
 }
 
 .visually-hidden:not(:focus):not(:active), input[type="checkbox"].visually-hidden, input[type="radio"].visually-hidden {
@@ -44,7 +43,6 @@ img {
   align-items: center;
   margin: 0 auto;
   padding-top: 10px;
-  outline: 1px solid red;
 }
 
 .main-header-logo {
@@ -52,7 +50,6 @@ img {
   width: 154px;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
 }
 
 .main-menu-link {
@@ -92,7 +89,6 @@ img {
   font-weight: bold;
   line-height: 18px;
   flex: 1;
-  outline: 1px solid red;
 }
 
 .user-navigation {
@@ -102,7 +98,6 @@ img {
   font-size: 14px;
   line-height: 16px;
   margin-top: 2px;
-  outline: 1px solid red;
 }
 
 .user-navigation__item {
@@ -181,7 +176,6 @@ img {
   color: #ffffff;
   margin-top: -7px;
   text-align: right;
-  outline: 1px solid red;
 }
 
 .nav-search {
@@ -199,8 +193,9 @@ img {
 
 .search-input-form {
   position: absolute;
-  right: 0px;
+  right: 0;
   top: 36px;
+  z-index: 9999;
 }
 
 .search-form {
@@ -214,6 +209,7 @@ img {
   color: #848483;
   font-size: 16px;
   font-weight: normal;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .user-entrance {
@@ -238,7 +234,11 @@ img {
 
 .full-basket {
   color: black;
-  background: url("../img/cart-full.png")
+  background: url("../img/cart-full.png");
+}
+
+.full-backet-mouseover {
+  z-index: 10;
 }
 
 .user-entrance {
@@ -258,6 +258,7 @@ img {
 .user-entrance-mouseover {
   background: url("../img/entrance-hover.png");
   color: black;
+  z-index: 9999;
 }
 
 .nav-search:hover {
@@ -274,6 +275,7 @@ img {
 
 .nav-search-mouseover {
   background-image: url("../img/magnifier-hover.png");
+  z-index: 9999;
 }
 
 .basket {
@@ -427,7 +429,6 @@ img {
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0px;
-  outline: 1px solid red;
   font-size: 14px;
   font-weight: normal;
 }
@@ -435,7 +436,12 @@ img {
 .breadcrumbs-link {
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs-link:hover, .breadcrumbs-link:active {
+  color: #ffbc9e;
   cursor: pointer;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.2);
 }
 
 .breadcrumbs-link-ending {
@@ -453,7 +459,6 @@ img {
   justify-content: space-between;
   margin-bottom: 40px;
   padding: 0;
-  outline: 1px solid red;
 }
 
 .menu-selection {
@@ -467,7 +472,7 @@ img {
   display: inline-block;
   padding: 7px 28px;
   min-width: 84px;
-  min-height: 16px;
+  height: 38px;
   color: #ffffff;
   background: #a6b7ae;
   font-size: 16px;
@@ -537,6 +542,7 @@ img {
   border: 3px solid #eef2f0;
   border-radius: 50%;
   left: -30px;
+  top: -3px;
 }
 
 .filter-input-radio:checked+label::after {
@@ -602,6 +608,7 @@ img {
   width: 193px;
   font-size: 16px;
   color: #ffffff;
+  border: 2px solid #9db1a5;
 }
 
 .menu-catalog-select:hover {
@@ -637,10 +644,45 @@ input[type="range"] {
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
-  height: 22px;
+  height: 20px;
   background-image: url("../img/filter-button.png");
   background-repeat: no-repeat;
   cursor: pointer;
+  background-size: contain;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/filter-button.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+input[type='range']::-ms-thumb {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/filter-button.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: contain;
+  z-index: 1;
+}
+
+input[type='range']::-moz-range-thumb:hover {
+  width: 22px;
+  height: 22px;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  width: 22px;
+  height: 22px;
+  background-size: contain;
 }
 
 input[type="range"].multirange {
@@ -680,7 +722,7 @@ input[type="range"].multirange.ghost::-webkit-slider-runnable-track {
 }
 
 input[type="range"].multirange.ghost::-moz-range-track {
-  background: var(--track-background);
+  background: linear-gradient(to right, transparent var(--low), var(--range-color) 0, var(--range-color) var(--high), transparent 0) no-repeat 0 40% / 100% 40%;
 }
 
 .button-link {
@@ -705,6 +747,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
 }
 
 .sale-berries {
+  background-color: #900329;
   background-image: url("../img/raspberries.jpg");
   background-repeat: no-repeat;
 }
@@ -722,13 +765,12 @@ input[type="range"].multirange.ghost::-moz-range-track {
   border-radius: 20px;
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
 }
 
 .sale-chocolate {
+  background-color: #4b2d1e;
   background-image: url("../img/chocolate.jpg");
   background-repeat: no-repeat;
-  outline: 1px solid red;
 }
 
 .berries-text {
@@ -768,9 +810,8 @@ input[type="range"].multirange.ghost::-moz-range-track {
 .catalog-list {
   display: flex;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   width: calc(100% + 26px);
-  outline: 1px solid red;
   margin-left: -13px;
   position: relative;
   min-height: 327px;
@@ -782,10 +823,8 @@ input[type="range"].multirange.ghost::-moz-range-track {
   color: #ffffff;
   list-style: none;
   margin: 0 0 33px 0;
-  /* padding: 6px 13px 0; */
   width: 25%;
   position: relative;
-  outline: 1px solid red;
   box-sizing: border-box;
   height: 327px;
 }
@@ -866,6 +905,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
 }
 
 .main-info {
+  background-color: #dfcb9f;
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
   background-color: #ede1c7;
@@ -874,15 +914,14 @@ input[type="range"].multirange.ghost::-moz-range-track {
   margin: 0 auto;
   margin-bottom: 40px;
   color: #323232;
-  outline: 1px solid red;
   height: 306px;
+  box-sizing: border-box;
 }
 
 .main-info-market {
   color: #575550;
   font-size: 24px;
   line-height: 30px;
-  outline: 1px solid red;
   margin: 3px 0 -10px 0;
 }
 
@@ -914,10 +953,12 @@ input[type="range"].multirange.ghost::-moz-range-track {
 
 .info-list.cow-icon {
   background: url("../img/cow.png") 0 0 no-repeat;
+  align-self: flex-end;
 }
 
 .info-list.thermometer-icon {
   background: url("../img/thermometer.png") 0 0 no-repeat;
+  align-self: flex-end;
 }
 
 .blog-mailling {
@@ -926,7 +967,6 @@ input[type="range"].multirange.ghost::-moz-range-track {
   margin: 0 auto;
   padding: 0;
   margin-bottom: 37px;
-  outline: 1px solid red;
 }
 
 .blog {
@@ -1082,7 +1122,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
 
 .pagination-list {
   position: absolute;
-  right: -4px;
+  right: 12px;
   bottom: 14px;
 }
 
@@ -1090,6 +1130,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   list-style: none;
   display: inline;
   padding: 10px;
+  cursor: pointer;
 }
 
 .pagination-item a {
@@ -1102,9 +1143,19 @@ input[type="range"].multirange.ghost::-moz-range-track {
 .pagination-item:hover {
   border-radius: 50%;
   padding: 4px 10px;
+  background-color: rgba(157, 177, 165, 0.5);
+  position: relative;
+}
+
+.pagination-item:active {
+  border-radius: 50%;
+  padding: 4px 10px;
   background-color: #ffffff;
   position: relative;
+}
 
+.pagination-item a:active {
+  color: #323232;
 }
 
 .pagination-item-current a {
@@ -1118,8 +1169,6 @@ input[type="range"].multirange.ghost::-moz-range-track {
   background-color: #ffffff;
   position: relative;
 }
-
-.pagination-item:hover {}
 
 .pagination-item-current::before {
   content: "";
@@ -1187,9 +1236,12 @@ input[type="range"].multirange.ghost::-moz-range-track {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 -12px;
   padding: 0;
-  outline: 1px solid red;
+}
+
+.main-index-footer {
+  margin: 0 auto;
 }
 
 .footer-list a, .footer-list {
@@ -1298,6 +1350,8 @@ input[type="range"].multirange.ghost::-moz-range-track {
   background-color: #f8f7f4;
   border-radius: 10px;
   display: none;
+  z-index: 100;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .feedback-modal {
@@ -1331,6 +1385,23 @@ input[type="range"].multirange.ghost::-moz-range-track {
   box-sizing: border-box;
 }
 
+.feedback-overlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.modal-index {
+  z-index: 100;
+}
+
 .modal-close {
   width: 22px;
   height: 22px;
@@ -1341,6 +1412,19 @@ input[type="range"].multirange.ghost::-moz-range-track {
   position: absolute;
   top: 15px;
   right: 12px;
+}
+
+.close-modal {
+  position: fixed;
+  height: 1000vh;
+  width: 1000vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .feedback-button {
@@ -1357,8 +1441,8 @@ input[type="range"].multirange.ghost::-moz-range-track {
 
 .modal-form {
   position: absolute;
-  right: 160px;
-  top: 59px;
+  right: 0;
+  top: 39px;
   list-style: none;
   background-color: #f7f6f3;
   display: none;
@@ -1368,14 +1452,16 @@ input[type="range"].multirange.ghost::-moz-range-track {
   color: #848483;
   font-size: 16px;
   font-weight: normal;
+  z-index: 9999;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .basket-form {
   display: block;
   position: absolute;
-  top: 58px;
-  right: 30px;
-  min-height: 229px;
+  top: 36px;
+  right: 0px;
+  min-height: 228px;
   min-width: 520px;
   padding: 7px 11px;
   display: none;
@@ -1392,16 +1478,16 @@ input[type="range"].multirange.ghost::-moz-range-track {
 
 .order-button {
   position: absolute;
-  bottom: 27px;
+  bottom: 39px;
   right: -1px;
-  padding: 9px;
+  padding: 10px;
 }
 
 .cart-table {
   width: 511px;
-  height: 113px;
+  height: 104px;
   border-bottom: #cacac7 1px solid;
-  padding-left: 26px;
+  padding-left: 7px;
 }
 
 .table-item {
@@ -1416,7 +1502,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
 }
 
 .table-weight {
-  width: 95px;
+  width: 100px;
 }
 
 .table-price {
@@ -1425,7 +1511,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
 }
 
 .row-total {
-  padding-left: 29px;
+  padding-left: 10px;
   width: 50px;
 }
 
@@ -1438,8 +1524,9 @@ input[type="range"].multirange.ghost::-moz-range-track {
   background: url("../img/cross.png") no-repeat;
   width: 11px;
   height: 11px;
-  background-position: 2px 16px;
+  background-position: 2px 12px;
   padding: 6px;
+  padding-bottom: 8px;
 }
 
 .modal-show {
