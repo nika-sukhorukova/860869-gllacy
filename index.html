@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style-min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 
@@ -131,7 +131,7 @@
         </div>
 
         <section class="catalog-item">
-          <h1 class="visually-hidden">Каталог товаров</h1>
+          <h2 class="visually-hidden">Каталог товаров</h2>
           <ul class="catalog-list">
             <li class="catalog-product">
               <a class="catalog-product__link" href="catalog-item.html">
@@ -191,7 +191,7 @@
             собственного
             производства на развес
           </h2>
-          <ul class="information">
+          <ul class="information-first-list">
             <li class="info-list ice-cream-icon">
               <h3 class="visually-hidden">Собственное производство</h3>
               <p class="manufacture">Все наше мороженое изготавливается на собственном производстве, с использованием
@@ -201,11 +201,14 @@
               <h3 class="visually-hidden">Качество сырья</h3>
               <p class="ecology">Для приготовления мороженого используются настоящие сливки и молоко высочайшего
                 качества.
-                Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
+                Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+              </p>
             </li>
+          </ul>
+          <ul class="information-second-list">
             <li class="info-list cow-icon">
               <h3 class="visually-hidden">Ингридиенты</h3>
-              <p class="Components">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
+              <p class="components">Закупка ингредиентов производится только у проверенных фермерских хозяйств и
                 компаний,
                 с которыми нас связывает долговременное сотрудничество.</p>
             </li>
@@ -345,11 +348,9 @@
         <button class="modal-close js-modal-close" type="button" aria-label="Закрыть форму обратной связи">Закрыть</button>
         <form class="feedback-form" action="#" method="POST">
           <p class="feedback-name">
-            <label class="visually-hidden" for="name">Ваше имя</label>
             <input class="feedback-form-textarea feedback-input" type="text" name="name" id="name" placeholder="Как вас зовут?">
           </p>
           <p class="feedback-email">
-            <label class="visually-hidden" for="email">Ваш e-mail</label>
             <input class="feedback-input feedback-form-textarea" type="email" name="email" id="email" placeholder="Ваша почта для ответа?">
           </p>
           <p class="feedback-notebook">

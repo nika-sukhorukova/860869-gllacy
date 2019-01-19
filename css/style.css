@@ -59,6 +59,9 @@ img {
   padding: 7px 13px;
   margin-bottom: 5px;
 }
+.main-menu-link:last-child{
+  margin-left: 2px;
+}
 
 .main-menu-link:hover {
   color: #323232;
@@ -101,7 +104,7 @@ img {
 }
 
 .user-navigation__item {
-  margin-left: 8px;
+  margin-left: 13px;
   position: relative;
 }
 
@@ -288,7 +291,7 @@ img {
   color: #ffffff;
   font-size: 22px;
   line-height: 24px;
-  margin: 0;
+  margin-top: 5px;
 }
 
 .navigator-time {
@@ -327,7 +330,7 @@ img {
 }
 
 .slider-list {
-  margin: 0;
+  margin-top: -27px;
   padding: 0;
   list-style: none;
 }
@@ -363,6 +366,9 @@ img {
   background-color: #9d8b84;
   background-image: url("../img/slide3.png");
 }
+.slide-button{
+  margin-top: -10px;
+}
 
 .button {
   display: inline-block;
@@ -395,7 +401,7 @@ img {
 
 .slider-controls {
   position: absolute;
-  bottom: 22px;
+  bottom: 20px;
   left: 0;
   z-index: 20;
   font-size: 0;
@@ -743,13 +749,12 @@ input[type="range"].multirange.ghost::-moz-range-track {
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
   border: none;
   cursor: pointer;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 .sale-berries {
   background-color: #900329;
   background-image: url("../img/raspberries.jpg");
-  background-repeat: no-repeat;
 }
 
 .discount {
@@ -757,11 +762,12 @@ input[type="range"].multirange.ghost::-moz-range-track {
   font-size: 35px;
   line-height: 41px;
   padding-left: 20px;
+  margin-top: 19px;
 }
 
 .sale-berries, .sale-chocolate {
   width: 560px;
-  height: 229px;
+  min-height: 229px;
   border-radius: 20px;
   margin: 0;
   padding: 0;
@@ -770,7 +776,6 @@ input[type="range"].multirange.ghost::-moz-range-track {
 .sale-chocolate {
   background-color: #4b2d1e;
   background-image: url("../img/chocolate.jpg");
-  background-repeat: no-repeat;
 }
 
 .berries-text {
@@ -780,6 +785,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
+  margin-top: -13px;
 }
 
 .sale-berries .button-link, .sale-chocolate .button-link {
@@ -795,6 +801,8 @@ input[type="range"].multirange.ghost::-moz-range-track {
   box-sizing: border-box;
   border-color: #ee5e3e;
   background-color: #ee5e3e;
+  margin-top: 23px;
+  margin-bottom: 15px;
 }
 
 .button-link:hover, .button-link:focus {
@@ -816,7 +824,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   position: relative;
   min-height: 327px;
   flex-wrap: wrap;
-  margin-top: 23px;
+  margin-top: -5px;
 }
 
 .catalog-product {
@@ -897,6 +905,7 @@ input[type="range"].multirange.ghost::-moz-range-track {
   font-size: 45px;
   line-height: 45px;
   top: 215px;
+  margin-left: -2px;
 }
 
 .catalog-item-price span {
@@ -904,33 +913,44 @@ input[type="range"].multirange.ghost::-moz-range-track {
   line-height: 45px;
 }
 
+
 .main-info {
   background-color: #dfcb9f;
   background-image: url("../img/wafer.jpg");
   background-repeat: repeat;
   background-color: #ede1c7;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px 18px 1px 9px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
   color: #323232;
-  height: 306px;
+  min-height: 306px;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .main-info-market {
   color: #575550;
   font-size: 24px;
   line-height: 30px;
-  margin: 3px 0 -10px 0;
+  margin: 14px 0 10px 9px;
 }
 
-.information {
+.information-first-list {
+  display: flex;
+  padding: 0; 
+  flex-direction: column;
+  margin: 0;
+  width: 559px;
+}
+.information-second-list{
   display: flex;
   padding: 0;
-  height: 218px;
   flex-direction: column;
-  flex-wrap: wrap;
+  margin: 0;
+  width: 560px;
 }
 
 .info-list {
@@ -938,17 +958,43 @@ input[type="range"].multirange.ghost::-moz-range-track {
   font-size: 16px;
   line-height: 22px;
   list-style: none;
-  width: calc(50% - 78px);
+  /* width: calc(50% - 74px); */
   padding-left: 60px;
   font-weight: normal;
+  margin-left: 10px;
+  margin-top: -7px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.manufacture {
+  margin-top: 20px;
+  margin-left: -3px;
+}
+
+.ecology{
+  margin-top: 16px;
+  margin-left: -3px;
+}
+
+.components{
+  margin-top: 13px;
+  margin-left: 5px;
+}
+
+.advantages-delivery{
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 .info-list.ice-cream-icon {
   background: url("../img/ice-cream.png") 0 0 no-repeat;
+  
 }
 
 .info-list.leaf-icon {
   background: url("../img/leaf.png") 0 0 no-repeat;
+  
 }
 
 .info-list.cow-icon {
