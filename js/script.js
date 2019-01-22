@@ -2,7 +2,7 @@ var linkSearch = document.querySelector(".search-button");
 var popupSearch = document.querySelector(".search-form");
 var closeSearch = document.querySelector(".js-close-modal");
 
-linkSearch.addEventListener("click", function (evt) {
+linkSearch.addEventListener("mouseover", function (evt) {
     linkSearch.classList.add("nav-search-mouseover");
     popupSearch.classList.add("modal-show");
     closeSearch.style.display = "block";

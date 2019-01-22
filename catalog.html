@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 </head>
 
@@ -44,7 +44,7 @@
             <a class="nav-search search-button" href="#"></a>
             <section class="search-input-form">
               <form class="search-form" action="#" method="POST">
-                <label for="email-entrance" aria-label="Ваш e-mail"></label>
+                <label for="search" aria-label="Поиск"></label>
                 <input class="search-input" type="text" id="search" name="name" placeholder="Что ищем?">
               </form>
             </section>
@@ -123,26 +123,26 @@
           <ul class="menu-selection">
             <li class="catalog-selection-list">
               <label class="catalog-label" for="select-button">Сортировка:</label>
-              <span class="menu-selection-list-sort">
+              <div class="menu-selection-list-sort">
                 <select class="menu-catalog-select select" name="select" id="select-button">
                   <option value="">по популярности</option>
                   <option value="">сначала недорогие</option>
                   <option value="">сначала дорогие</option>
                   <option value="">по жирности</option>
                 </select>
-              </span>
+              </div>
             </li>
             <li class="catalog-selection-list">
-              <label class="catalog-label" for="price">Цена: <span class="js-low-price">100</span> руб.- <span class="js-high-price">500</span>
+              <label class="catalog-label label-price" for="price">Цена: <span class="js-low-price">100</span> руб.- <span class="js-high-price">500</span>
                 руб.</label>
-              <span class="menu-selection-list">
+              <div class="menu-selection-list">
                 <!-- <input multiple  type="range" id="price" name="price" min="0" max="700"> Раскоментить для сортировщика-->
                 <input  type="range" id="price" name="price" min="0" max="700">
-              </span>
+              </div>
             </li>
             <li class="catalog-selection-list">
-              <span class="catalog-label">Жирность:</span>
-              <span class="menu-selection-list menu-selection-list-consistency">
+              <p class="catalog-label">Жирность:</p>
+              <div class="menu-selection-list menu-selection-list-consistency">
                 <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="0%" id="zero">
                 <label class="label-radio" for="zero">0%</label>
                 <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="до 10%" id="ten"
@@ -152,11 +152,11 @@
                 <label class="label-radio" for="thirty">до 30%</label> 
                 <input class="filter-input-radio visually-hidden" type="radio" name="consistency" value="выше 30%" id="up-thirty">
                 <label class="label-radio" for="up-thirty">выше 30%</label>
-              </span>
+              </div>
             </li>
             <li class="catalog-selection-list">
-              <span class="catalog-label"> Наполнители:</span>
-              <section class="menu-selection-list">
+              <p class="catalog-label"> Наполнители:</p>
+              <section class="menu-selection-list adding-list">
                 <input class="checkbox visually-hidden" type="checkbox" name="шоколадные" id="choco" checked>
                 <label for="choco">шоколадные</label>
                 <input class="checkbox visually-hidden" type="checkbox" name="сахарные присыпки" id="sugar" checked>
@@ -311,7 +311,7 @@
 
     <footer class="main-footer catalog-footer">
       <h3 class="visually-hidden">Мы в социальных сетях</h3>
-      <div class="footer-social">
+      <div class="footer-social-catalog">
         <ul class="social-news">
           <li class="social-button-list">
             <a class="social-button" href="https://twitter.com/" title="Twitter">
@@ -381,22 +381,22 @@
         </ul>
       </div>
       <h3 class="visually-hidden">Дополнительная информация о магазине</h3>
-      <div class="footer-list">
-        <ul class="footer-list-info">
-          <li class="footer-list-info-item"><a href="#">Для поставщиков</a>
+      <div class="footer-list-catalog">
+        <ul class="footer-list-info-catalog">
+          <li class="footer-list-info-item-catalog"><a class="footer-list-link" href="#">Для поставщиков</a>
           </li>
-          <li class="footer-list-info-item"><a href="#">О производстве</a>
+          <li class="footer-list-info-item-catalog"><a class="footer-list-link" href="#">О производстве</a>
           </li>
-          <li class="footer-list-info-item"><a href="#">Наши документы</a>
+          <li class="footer-list-info-item-catalog footer-list-right-column"><a class="footer-list-link" href="#">Наши документы</a>
           </li>
-          <li class="footer-list-info-item"><a href="#">Экологические стандарты</a>
+          <li class="footer-list-info-item-catalog footer-list-right-column"><a class="footer-list-link" href="#">Экологические стандарты</a>
           </li>
         </ul>
       </div>
       <div class="copyright-image">
         <p class="footer-copyright">
           <b class="copyright">Сделано в
-            <a class="academy" href="https://htmlacademy.ru">HTML Academy</a></b>
+            <a class="academy" href="https://htmlacademy.ru">HTML Academy</a> © 2017</b>
         </p>
       </div>
     </footer>
